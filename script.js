@@ -1,9 +1,5 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbwvpj1MGcsqLbXIo03QyeMXh5iZ6vdoK67vQhN5rm0mfV_WruzSuSDtYQjck9CuVv_F/exec";
 
-// counter config
-const OFFSET = 355;
-const MAX_SPOTS = 500;
-
 const hbg = document.getElementById('hbg');
 const mob = document.getElementById('mob');
 
@@ -68,10 +64,7 @@ async function loadSpots() {
 
     if (data.status === 'success') {
       const el = document.getElementById('spotNum');
-      if (el) {
-        const adjusted = Math.min(data.remainingSpots + OFFSET, MAX_SPOTS);
-        el.textContent = adjusted;
-      }
+      if (el) el.textContent = data.remainingSpots;
     }
   } catch (err) {
     console.error('Failed to load spots:', err);
@@ -266,8 +259,7 @@ if (waitlistForm) {
       if (result.status === 'success') {
         const el = document.getElementById('spotNum');
         if (el && typeof result.remainingSpots !== 'undefined') {
-          const adjusted = Math.min(result.remainingSpots + OFFSET, MAX_SPOTS);
-          el.textContent = adjusted;
+          el.textContent = result.remainingSpots;
         }
 
         this.reset();
@@ -279,7 +271,7 @@ if (waitlistForm) {
         showToast('This phone number is already registered.');
       } else if (result.status === 'full') {
         const el = document.getElementById('spotNum');
-        if (el) el.textContent = MAX_SPOTS;
+        if (el) el.textContent = '0';
         showToast('All 500 spots have been filled!!');
       } else {
         showToast(result.message || 'Something went wrong. Please try again.');
