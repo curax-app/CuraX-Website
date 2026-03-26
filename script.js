@@ -64,7 +64,7 @@ async function loadSpots() {
 
     if (data.status === 'success') {
       const el = document.getElementById('spotNum');
-      if (el) el.textContent = data.remainingSpots;
+      if (el) el.textContent = data.totalRegistered;
     }
   } catch (err) {
     console.error('Failed to load spots:', err);
@@ -259,7 +259,7 @@ if (waitlistForm) {
       if (result.status === 'success') {
         const el = document.getElementById('spotNum');
         if (el && typeof result.remainingSpots !== 'undefined') {
-          el.textContent = result.remainingSpots;
+          el.textContent = result.totalRegistered;
         }
 
         this.reset();
