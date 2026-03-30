@@ -64,7 +64,7 @@ async function loadSpots() {
 
     if (data.status === 'success') {
       const el = document.getElementById('spotNum');
-      if (el) el.textContent = data.totalRegistered;
+      if (el) el.textContent = data.displayCount;
     }
   } catch (err) {
     console.error('Failed to load spots:', err);
@@ -258,8 +258,8 @@ if (waitlistForm) {
 
       if (result.status === 'success') {
         const el = document.getElementById('spotNum');
-        if (el && typeof result.remainingSpots !== 'undefined') {
-          el.textContent = result.totalRegistered;
+        if (el && typeof result.displayCount !== 'undefined') {
+          el.textContent = result.displayCount;
         }
 
         this.reset();
@@ -271,8 +271,12 @@ if (waitlistForm) {
         showToast('This phone number is already registered.');
       } else if (result.status === 'full') {
         const el = document.getElementById('spotNum');
-        if (el) el.textContent = '0';
-        showToast('All 500 spots have been filled!!');
+        if (el && typeof result.displayCount !== 'undefined') {
+          el.textContent = result.displayCount;
+        } else if (el) {
+          el.textContent = '0';
+        }
+        showToast(`All ${result.maxSpots || 500} spots have been filled!!`);
       } else {
         showToast(result.message || 'Something went wrong. Please try again.');
       }
