@@ -1,0 +1,14 @@
+/* Pointer decoration only: the native cursor and page hit targets stay intact. */
+.cx-cursor-layer{position:fixed;inset:0;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:hidden;pointer-events:none!important;z-index:2147483646;opacity:0;transition:opacity .18s;contain:strict}
+.cx-cursor-layer::backdrop{background:transparent;pointer-events:none!important}
+.cx-cursor-layer.cx-cursor-visible{opacity:1}
+.cx-cursor-ring,.cx-cursor-dot,.cx-cursor-trail,.cx-cursor-ripple{position:absolute;top:0;left:0;pointer-events:none;will-change:transform}
+.cx-cursor-orbit{width:34px;height:34px;border:1px solid #50cfff85;border-radius:50%;background:radial-gradient(circle,#0eb4f610,transparent 70%);box-shadow:0 0 17px #0eb4f633,inset 0 0 9px #0eb4f612;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s,box-shadow .25s}
+.cx-cursor-hot .cx-cursor-orbit{width:52px;height:52px;border-color:#a5edffc7;background:radial-gradient(circle,#0eb4f61a,transparent 70%);box-shadow:0 0 24px #0eb4f64d,inset 0 0 12px #0eb4f624}
+.cx-cursor-dot:before{content:'';display:block;width:3px;height:3px;border-radius:50%;background:#b5f1ff;box-shadow:0 0 7px #49d5ff;transform:translate(-50%,-50%)}
+.cx-cursor-trail{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#35caff;box-shadow:0 0 7px #0eb4f666;opacity:0}
+.cx-cursor-ripple-wave{width:32px;height:32px;border:1px solid #75dfff;border-radius:50%;box-shadow:0 0 13px #0eb4f659;transform:translate(-50%,-50%);opacity:0}
+.cursor-toggle{padding:0;border:0;background:none;font:inherit;color:inherit;letter-spacing:inherit;line-height:inherit;text-align:left}
+.cursor-toggle:hover{color:#b8efff}
+@media(prefers-reduced-motion:reduce){.cx-cursor-layer{display:none!important}}
+@media(any-hover:none){.cx-cursor-layer{display:none!important}}

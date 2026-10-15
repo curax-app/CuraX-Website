@@ -1,514 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>CuraX</title>
-  <meta name="description" content="Introducing CuraX - Healthcare Reimagined.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.curax.life/">
-
-  <meta property="og:title" content="CuraX">
-  <meta property="og:description" content="Introducing CuraX - Healthcare Reimagined.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.curax.life/">
-  <meta property="og:image" content="https://www.curax.life/assets/logo/curax-logo.png">
-
-  <link rel="icon" href="assets/logo/curax-logo.png" type="image/png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "CuraX",
-  "url": "https://www.curax.life/",
-  "logo": "https://www.curax.life/assets/logo/curax-logo.png"
-}
-</script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#040a10" name="theme-color" />
+  <meta
+    content="CuraX. Clarity before care. Explore the patient app and CuraX Partner for clinics, diagnostics and hospitals. Hyderabad first."
+    name="description" />
+  <title>CuraX — Clarity Before Care</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link as="image" fetchpriority="high" href="assets/assets/cyan-canyon-4k.webp" media="(min-width:761px)"
+    rel="preload" />
+  <link as="image" fetchpriority="high" href="assets/assets/cyan-canyon-hd.webp" media="(max-width:760px)"
+    rel="preload" />
+  <link href="assets/css/home.css" rel="stylesheet" />
+  <link href="assets/css/section-lighting.css" rel="stylesheet" />
+  <link href="assets/css/cursor-glow.css" rel="stylesheet" />
+  <!-- Search engine and social sharing metadata -->
+  <link href="https://www.curax.life/" rel="canonical" />
+  <meta content="index, follow" name="robots" />
+  <meta content="website" property="og:type" />
+  <meta content="CuraX" property="og:site_name" />
+  <meta content="CuraX — Clarity Before Care" property="og:title" />
+  <meta
+    content="CuraX. Clarity before care. Explore the patient app and CuraX Partner for clinics, diagnostics and hospitals. Hyderabad first."
+    property="og:description" />
+  <meta content="https://www.curax.life/" property="og:url" />
+  <meta content="https://www.curax.life/assets/assets/curax-glass-alpha.webp" property="og:image" />
+  <meta content="CuraX brand logo" property="og:image:alt" />
+  <meta content="summary" name="twitter:card" />
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CuraX","url":"https://www.curax.life/","logo":"https://www.curax.life/assets/assets/curax-glass-alpha.webp"}</script>
+  <link href="assets/css/footer.css" rel="stylesheet" />
 </head>
 
 <body>
-  <header>
-    <nav class="nav">
-      <div class="nav-inner">
-        <div class="nav-logo">
-          <img src="assets/logo/curax-logo.png" alt="CuraX Logo">
-          <div class="nav-logo-sep"></div>
-          <div class="nav-logo-tag">Cura<span class="x-emp-logo">X</span></div>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Cura<span class="x-emp">X</span></a></li>
-          <li><a href="#getstarted">Get started</a></li>
-          <li><a href="#howitworks">How it works</a></li>
-          <li><a href="#whycurax">Why CuraX?</a></li>
-          <li><a href="#register" class="nav-cta">Register Now</a></li>
-        </ul>
-        <button class="hamburger" id="hbg"><span></span><span></span><span></span></button>
-      </div>
-      <div class="mob-menu" id="mob">
-        <a href="#getstarted">Get started</a>
-        <a href="#howitworks">How it works</a>
-        <a href="#whycurax">Why Cura<span class="x-emp">X</span>?</a>
-        <a href="#register" class="mob-cta">Register Now</a>
-      </div>
-    </nav>
+  <a class="skip" href="#vision">Skip to content</a>
+  <!-- The CuraX contour is reused from the supplied brand asset. -->
+  <svg aria-hidden="true" height="0" style="position:absolute" width="0">
+    <defs>
+      <path
+        d="M411 72 L624 72 L624 73 L631 73 L631 74 L636 74 L636 75 L641 75 L641 76 L644 76 L644 77 L648 77 L648 78 L650 78 L650 79 L653 79 L653 80 L655 80 L655 81 L658 81 L658 82 L662 83 L663 85 L665 85 L665 86 L667 86 L668 88 L670 88 L671 90 L673 90 L676 94 L678 94 L678 95 L679 95 L679 96 L680 96 L680 97 L681 97 L681 98 L682 98 L682 99 L683 99 L683 100 L684 100 L684 101 L685 101 L685 102 L691 107 L691 109 L694 111 L694 113 L695 113 L696 116 L698 117 L698 119 L699 119 L699 121 L700 121 L700 123 L701 123 L701 125 L702 125 L702 127 L703 127 L703 129 L704 129 L704 131 L705 131 L705 134 L706 134 L706 137 L707 137 L707 140 L708 140 L708 144 L709 144 L709 149 L710 149 L710 154 L711 154 L711 253 L712 253 L712 302 L713 302 L713 305 L714 305 L714 308 L715 308 L716 312 L717 312 L720 316 L722 316 L722 317 L724 317 L724 318 L726 318 L726 319 L730 319 L730 320 L739 320 L739 321 L886 321 L886 322 L892 322 L892 323 L895 323 L895 324 L899 324 L899 325 L902 325 L902 326 L908 327 L908 328 L910 328 L910 329 L913 329 L913 330 L919 332 L920 334 L922 334 L923 336 L925 336 L926 338 L928 338 L929 340 L931 340 L935 345 L937 345 L937 346 L943 351 L943 353 L948 357 L948 359 L951 361 L951 363 L953 364 L954 368 L956 369 L956 371 L957 371 L957 373 L958 373 L958 376 L959 376 L959 378 L960 378 L960 380 L961 380 L961 383 L962 383 L962 386 L963 386 L963 389 L964 389 L964 393 L965 393 L965 399 L966 399 L966 427 L967 427 L967 567 L966 567 L966 580 L965 580 L965 586 L964 586 L963 594 L962 594 L962 597 L961 597 L960 603 L959 603 L959 605 L958 605 L958 607 L957 607 L957 610 L955 611 L953 617 L951 618 L951 620 L949 621 L949 623 L945 626 L945 628 L944 628 L944 629 L943 629 L943 630 L942 630 L942 631 L941 631 L941 632 L940 632 L940 633 L939 633 L939 634 L938 634 L938 635 L937 635 L932 641 L930 641 L930 642 L929 642 L928 644 L926 644 L924 647 L922 647 L922 648 L920 648 L919 650 L917 650 L917 651 L915 651 L915 652 L913 652 L913 653 L911 653 L911 654 L908 654 L908 655 L906 655 L906 656 L903 656 L903 657 L900 657 L900 658 L896 658 L896 659 L892 659 L892 660 L888 660 L888 661 L881 661 L881 662 L777 662 L777 663 L726 663 L726 664 L722 664 L722 665 L716 666 L716 667 L712 668 L711 670 L709 670 L706 674 L704 674 L703 677 L702 677 L702 678 L700 679 L700 681 L698 682 L696 688 L695 688 L694 695 L693 695 L693 701 L692 701 L692 826 L691 826 L691 848 L690 848 L690 856 L689 856 L689 861 L688 861 L687 869 L686 869 L686 872 L685 872 L684 878 L683 878 L683 880 L682 880 L682 882 L681 882 L681 884 L680 884 L678 890 L676 891 L676 893 L674 894 L674 896 L671 898 L671 900 L670 900 L670 901 L669 901 L669 902 L668 902 L668 903 L667 903 L667 904 L666 904 L666 905 L665 905 L665 906 L664 906 L664 907 L663 907 L663 908 L662 908 L657 914 L655 914 L653 917 L651 917 L651 918 L648 919 L647 921 L645 921 L645 922 L643 922 L643 923 L641 923 L641 924 L639 924 L639 925 L637 925 L637 926 L635 926 L635 927 L632 927 L632 928 L627 929 L627 930 L619 931 L619 932 L613 932 L613 933 L409 933 L409 932 L402 932 L402 931 L398 931 L398 930 L394 930 L394 929 L388 928 L388 927 L383 926 L383 925 L381 925 L381 924 L375 922 L374 920 L370 919 L368 916 L366 916 L365 914 L363 914 L363 913 L362 913 L362 912 L361 912 L361 911 L360 911 L360 910 L359 910 L359 909 L358 909 L358 908 L357 908 L357 907 L356 907 L356 906 L355 906 L355 905 L354 905 L354 904 L353 904 L353 903 L347 898 L347 896 L344 894 L344 892 L343 892 L342 889 L340 888 L340 886 L339 886 L339 884 L338 884 L338 882 L337 882 L337 880 L336 880 L336 878 L335 878 L335 876 L334 876 L334 874 L333 874 L333 871 L332 871 L332 868 L331 868 L331 864 L330 864 L330 860 L329 860 L329 855 L328 855 L328 847 L327 847 L327 710 L328 710 L328 692 L327 692 L326 684 L325 684 L325 681 L324 681 L324 678 L323 678 L323 675 L322 675 L321 669 L319 669 L317 666 L315 666 L315 665 L313 665 L313 664 L310 664 L310 663 L255 663 L255 662 L144 662 L144 661 L137 661 L137 660 L132 660 L132 659 L129 659 L129 658 L125 658 L125 657 L123 657 L123 656 L117 655 L117 654 L115 654 L115 653 L113 653 L113 652 L107 650 L106 648 L104 648 L103 646 L101 646 L100 644 L98 644 L96 641 L94 641 L89 635 L87 635 L87 634 L86 634 L86 633 L85 633 L85 632 L79 627 L79 625 L76 623 L76 621 L75 621 L75 620 L73 619 L73 617 L71 616 L71 614 L70 614 L70 612 L69 612 L69 610 L68 610 L68 608 L67 608 L67 606 L66 606 L66 604 L65 604 L65 602 L64 602 L64 599 L63 599 L63 597 L62 597 L62 593 L61 593 L61 590 L60 590 L60 586 L59 586 L59 580 L58 580 L58 563 L57 563 L57 416 L58 416 L58 403 L59 403 L59 397 L60 397 L61 389 L62 389 L62 386 L63 386 L64 380 L65 380 L65 378 L66 378 L66 376 L67 376 L67 374 L68 374 L68 372 L69 372 L71 366 L72 366 L73 363 L75 362 L75 360 L76 360 L76 359 L78 358 L78 356 L83 352 L83 350 L84 350 L88 345 L90 345 L93 341 L95 341 L97 338 L99 338 L100 336 L104 335 L105 333 L107 333 L107 332 L109 332 L109 331 L112 331 L112 330 L114 330 L114 329 L117 329 L117 328 L119 328 L119 327 L123 327 L123 326 L126 326 L126 325 L131 325 L131 324 L136 324 L136 323 L143 323 L143 322 L160 322 L160 321 L273 321 L273 320 L280 320 L280 319 L284 319 L284 318 L288 318 L288 317 L291 317 L291 316 L293 316 L293 315 L296 315 L297 313 L299 313 L299 312 L301 312 L302 310 L304 310 L307 306 L309 306 L310 303 L314 300 L314 298 L316 297 L317 293 L318 293 L319 290 L320 290 L320 287 L321 287 L322 282 L323 282 L323 279 L324 279 L325 270 L326 270 L326 263 L327 263 L327 169 L328 169 L328 153 L329 153 L329 146 L330 146 L330 142 L331 142 L332 134 L333 134 L333 132 L334 132 L334 129 L335 129 L335 127 L336 127 L336 124 L337 124 L338 120 L340 119 L341 115 L344 113 L344 111 L347 109 L347 107 L351 104 L351 102 L352 102 L356 97 L358 97 L361 93 L363 93 L365 90 L367 90 L367 89 L370 88 L371 86 L373 86 L373 85 L375 85 L376 83 L378 83 L378 82 L380 82 L380 81 L382 81 L382 80 L385 80 L385 79 L387 79 L387 78 L390 78 L390 77 L393 77 L393 76 L396 76 L396 75 L400 75 L400 74 L411 73 Z M564 129 L563 129 L563 130 L416 130 L416 131 L411 131 L411 132 L408 132 L408 133 L406 133 L406 134 L400 136 L400 137 L399 137 L399 138 L393 143 L393 145 L391 146 L390 151 L389 151 L389 154 L388 154 L388 158 L387 158 L387 193 L386 193 L386 271 L385 271 L385 280 L384 280 L384 285 L383 285 L382 294 L381 294 L381 297 L380 297 L380 300 L379 300 L379 303 L378 303 L378 306 L377 306 L377 308 L376 308 L376 310 L375 310 L374 315 L372 316 L370 322 L368 323 L368 325 L367 325 L367 327 L364 329 L364 331 L361 333 L361 335 L360 335 L360 336 L359 336 L359 337 L353 342 L353 344 L352 344 L352 346 L351 346 L350 348 L346 349 L343 353 L341 353 L338 357 L336 357 L335 359 L333 359 L333 360 L330 361 L329 363 L327 363 L327 364 L325 364 L325 365 L323 365 L323 366 L321 366 L321 367 L319 367 L319 368 L316 368 L316 369 L314 369 L314 370 L311 370 L311 371 L305 372 L305 373 L301 373 L301 374 L297 374 L297 375 L292 375 L292 376 L285 376 L285 377 L275 377 L275 378 L146 379 L146 380 L142 380 L142 381 L136 382 L135 384 L131 385 L129 388 L126 389 L126 391 L122 394 L122 396 L121 396 L121 398 L120 398 L120 400 L119 400 L119 402 L118 402 L117 413 L116 413 L116 571 L117 571 L117 577 L118 577 L118 581 L119 581 L119 583 L120 583 L121 588 L123 589 L123 591 L124 591 L124 592 L125 592 L130 598 L134 599 L135 601 L138 601 L138 602 L141 602 L141 603 L146 603 L146 604 L265 604 L265 605 L281 605 L281 604 L291 604 L291 603 L297 603 L297 602 L307 601 L307 600 L313 599 L313 598 L315 598 L315 597 L318 597 L318 596 L320 596 L321 594 L325 593 L326 591 L330 590 L332 587 L334 587 L336 584 L338 584 L343 578 L345 578 L346 575 L347 575 L347 574 L348 574 L348 573 L349 573 L349 572 L355 567 L355 565 L356 565 L356 564 L357 564 L357 563 L358 563 L358 562 L359 562 L359 561 L360 561 L360 560 L361 560 L361 559 L362 559 L362 558 L363 558 L363 557 L364 557 L364 556 L365 556 L365 555 L366 555 L366 554 L367 554 L367 553 L368 553 L368 552 L369 552 L369 551 L370 551 L370 550 L371 550 L371 549 L372 549 L372 548 L373 548 L373 547 L374 547 L374 546 L375 546 L375 545 L376 545 L376 544 L377 544 L377 543 L378 543 L378 542 L379 542 L379 541 L380 541 L380 540 L381 540 L386 534 L389 534 L389 533 L390 533 L390 532 L391 532 L391 531 L392 531 L392 530 L393 530 L393 529 L394 529 L394 528 L395 528 L395 527 L396 527 L396 526 L397 526 L397 525 L398 525 L398 524 L399 524 L399 523 L400 523 L400 522 L401 522 L401 521 L402 521 L402 520 L403 520 L403 519 L409 514 L408 512 L409 512 L409 511 L410 511 L410 510 L411 510 L411 509 L412 509 L412 508 L413 508 L413 507 L414 507 L414 506 L415 506 L415 505 L416 505 L416 504 L417 504 L422 498 L424 499 L424 498 L428 495 L428 493 L429 493 L429 492 L430 492 L430 491 L436 486 L436 484 L437 484 L437 483 L440 483 L440 482 L441 482 L441 481 L442 481 L442 480 L443 480 L443 479 L444 479 L444 478 L445 478 L445 477 L446 477 L446 476 L447 476 L447 475 L448 475 L448 474 L449 474 L449 473 L450 473 L450 472 L451 472 L451 471 L452 471 L452 470 L453 470 L453 469 L459 464 L458 462 L459 462 L464 456 L467 456 L467 455 L468 455 L468 454 L469 454 L469 453 L470 453 L470 452 L471 452 L471 451 L472 451 L472 450 L473 450 L473 449 L474 449 L474 448 L475 448 L475 447 L476 447 L476 446 L477 446 L477 445 L478 445 L478 444 L479 444 L479 443 L480 443 L480 442 L481 442 L481 441 L482 441 L482 440 L483 440 L483 439 L484 439 L484 438 L485 438 L485 437 L486 437 L486 436 L487 436 L487 435 L488 435 L488 434 L489 434 L489 433 L490 433 L490 432 L491 432 L491 431 L492 431 L492 430 L493 430 L493 429 L494 429 L494 428 L495 428 L495 427 L496 427 L496 426 L497 426 L497 425 L498 425 L498 424 L499 424 L499 423 L500 423 L500 422 L501 422 L501 421 L502 421 L502 420 L503 420 L503 419 L504 419 L504 418 L505 418 L505 417 L506 417 L506 416 L507 416 L507 415 L508 415 L508 414 L509 414 L509 413 L510 413 L510 412 L511 412 L511 411 L512 411 L512 410 L513 410 L513 409 L514 409 L514 408 L515 408 L515 407 L516 407 L516 406 L517 406 L517 405 L518 405 L518 404 L519 404 L519 403 L520 403 L520 402 L521 402 L521 401 L522 401 L522 400 L523 400 L523 399 L524 399 L524 398 L525 398 L525 397 L526 397 L526 396 L527 396 L527 395 L528 395 L528 394 L529 394 L529 393 L530 393 L530 392 L531 392 L531 391 L532 391 L532 390 L533 390 L533 389 L534 389 L534 388 L535 388 L535 387 L536 387 L536 386 L537 386 L537 385 L538 385 L538 384 L539 384 L539 383 L540 383 L540 382 L541 382 L541 381 L542 381 L542 380 L543 380 L543 379 L544 379 L544 378 L545 378 L545 377 L546 377 L546 376 L547 376 L547 375 L548 375 L548 374 L549 374 L549 373 L550 373 L550 372 L551 372 L551 371 L552 371 L552 370 L553 370 L553 369 L554 369 L554 368 L555 368 L555 367 L556 367 L556 366 L557 366 L557 365 L558 365 L558 364 L559 364 L559 363 L560 363 L560 362 L561 362 L561 361 L562 361 L562 360 L563 360 L563 359 L564 359 L564 358 L565 358 L565 357 L566 357 L566 356 L572 351 L572 348 L573 348 L573 347 L574 347 L574 346 L575 346 L575 345 L576 345 L576 344 L577 344 L582 338 L585 338 L586 335 L587 335 L587 334 L588 334 L588 333 L594 328 L594 326 L595 326 L600 320 L602 321 L602 319 L603 319 L603 318 L604 318 L604 317 L605 317 L605 316 L606 316 L606 315 L612 310 L612 308 L613 308 L613 307 L614 307 L614 306 L615 306 L615 305 L616 305 L616 304 L617 304 L617 303 L618 303 L618 302 L619 302 L619 301 L620 301 L620 300 L621 300 L621 299 L622 299 L622 298 L623 298 L623 297 L624 297 L624 296 L625 296 L625 295 L626 295 L626 294 L627 294 L627 293 L628 293 L628 292 L629 292 L629 291 L630 291 L635 285 L637 285 L637 284 L641 281 L641 279 L642 279 L643 276 L645 275 L645 273 L646 273 L646 271 L647 271 L647 268 L648 268 L648 266 L649 266 L649 262 L650 262 L650 258 L651 258 L651 253 L652 253 L652 160 L651 160 L651 155 L650 155 L650 152 L649 152 L649 150 L648 150 L646 144 L645 144 L645 143 L644 143 L644 142 L643 142 L638 136 L636 136 L636 135 L634 135 L634 134 L632 134 L632 133 L630 133 L630 132 L622 131 L622 130 L609 130 L609 129 Z M817 378 L816 378 L816 379 L659 379 L659 380 L652 380 L652 381 L647 381 L647 382 L639 383 L639 384 L633 385 L633 386 L631 386 L631 387 L628 387 L628 388 L622 390 L621 392 L619 392 L619 393 L617 393 L615 396 L613 396 L613 397 L612 397 L612 398 L611 398 L611 399 L610 399 L610 400 L609 400 L609 401 L608 401 L608 402 L607 402 L607 403 L606 403 L606 404 L605 404 L605 405 L604 405 L604 406 L603 406 L603 407 L602 407 L602 408 L601 408 L601 409 L600 409 L600 410 L599 410 L599 411 L598 411 L598 412 L597 412 L597 413 L596 413 L596 414 L595 414 L595 415 L594 415 L594 416 L593 416 L593 417 L592 417 L592 418 L591 418 L591 419 L590 419 L590 420 L584 425 L583 428 L581 428 L580 430 L578 430 L578 431 L577 431 L577 432 L576 432 L576 433 L575 433 L575 434 L574 434 L574 435 L573 435 L573 436 L572 436 L572 437 L571 437 L571 438 L570 438 L570 439 L569 439 L569 440 L568 440 L568 441 L567 441 L567 442 L566 442 L566 443 L565 443 L565 444 L564 444 L564 445 L563 445 L563 446 L562 446 L562 447 L561 447 L561 448 L560 448 L560 449 L559 449 L559 450 L558 450 L558 451 L557 451 L557 452 L556 452 L556 453 L555 453 L555 454 L554 454 L554 455 L553 455 L553 456 L552 456 L552 457 L551 457 L551 458 L550 458 L550 459 L549 459 L549 460 L548 460 L548 461 L547 461 L547 462 L546 462 L546 463 L545 463 L545 464 L544 464 L544 465 L543 465 L543 466 L542 466 L542 467 L541 467 L541 468 L540 468 L540 469 L539 469 L539 470 L538 470 L538 471 L537 471 L537 472 L536 472 L536 473 L535 473 L535 474 L534 474 L534 475 L533 475 L533 476 L532 476 L532 477 L531 477 L531 478 L525 483 L524 487 L521 488 L520 490 L518 490 L518 491 L517 491 L517 492 L516 492 L516 493 L515 493 L515 494 L509 499 L508 503 L505 504 L504 506 L502 506 L502 507 L501 507 L501 508 L500 508 L500 509 L499 509 L499 510 L498 510 L498 511 L497 511 L497 512 L496 512 L496 513 L495 513 L495 514 L494 514 L494 515 L493 515 L493 516 L492 516 L492 517 L491 517 L491 518 L490 518 L490 519 L489 519 L489 520 L488 520 L488 521 L487 521 L487 522 L486 522 L486 523 L485 523 L485 524 L484 524 L484 525 L483 525 L483 526 L477 531 L476 535 L473 536 L472 538 L470 538 L470 539 L469 539 L469 540 L468 540 L468 541 L467 541 L467 542 L461 547 L460 551 L457 552 L456 554 L454 554 L454 555 L453 555 L453 556 L452 556 L452 557 L451 557 L451 558 L450 558 L450 559 L449 559 L449 560 L448 560 L448 561 L447 561 L447 562 L446 562 L446 563 L445 563 L445 564 L444 564 L444 565 L443 565 L443 566 L442 566 L442 567 L441 567 L441 568 L440 568 L440 569 L439 569 L439 570 L438 570 L438 571 L437 571 L437 572 L436 572 L436 573 L435 573 L435 574 L434 574 L434 575 L433 575 L433 576 L432 576 L432 577 L431 577 L431 578 L430 578 L430 579 L429 579 L429 580 L428 580 L428 581 L427 581 L427 582 L426 582 L426 583 L425 583 L425 584 L424 584 L424 585 L418 590 L418 592 L417 592 L417 593 L416 593 L416 594 L410 599 L410 601 L406 604 L406 606 L404 607 L404 609 L402 610 L402 612 L401 612 L400 615 L398 616 L398 618 L397 618 L397 620 L396 620 L396 622 L395 622 L395 624 L394 624 L394 626 L393 626 L393 629 L392 629 L391 634 L390 634 L390 637 L389 637 L388 646 L387 646 L387 849 L388 849 L388 853 L389 853 L391 859 L393 860 L393 862 L394 862 L394 863 L395 863 L395 864 L396 864 L401 870 L403 870 L403 871 L405 871 L405 872 L407 872 L407 873 L410 873 L410 874 L415 874 L415 875 L604 875 L604 874 L609 874 L609 873 L612 873 L612 872 L618 870 L618 869 L619 869 L619 868 L620 868 L620 867 L626 862 L626 860 L627 860 L627 858 L628 858 L628 856 L629 856 L629 853 L630 853 L630 848 L631 848 L631 771 L632 771 L632 695 L633 695 L633 688 L634 688 L634 684 L635 684 L635 680 L636 680 L637 673 L638 673 L638 671 L639 671 L639 668 L640 668 L640 666 L641 666 L641 664 L642 664 L642 662 L643 662 L643 660 L644 660 L646 654 L648 653 L648 651 L650 650 L650 648 L653 646 L653 644 L657 641 L657 639 L658 639 L658 638 L659 638 L659 637 L660 637 L660 636 L661 636 L661 635 L662 635 L662 634 L663 634 L663 633 L664 633 L664 632 L665 632 L670 626 L672 626 L674 623 L676 623 L677 621 L681 620 L682 618 L684 618 L684 617 L686 617 L686 616 L688 616 L688 615 L690 615 L690 614 L693 614 L693 613 L698 612 L698 611 L703 610 L703 609 L707 609 L707 608 L711 608 L711 607 L716 607 L716 606 L724 606 L724 605 L868 605 L868 604 L879 604 L879 603 L883 603 L883 602 L889 601 L890 599 L894 598 L894 597 L895 597 L895 596 L896 596 L896 595 L902 590 L902 588 L903 588 L903 586 L904 586 L904 584 L905 584 L905 582 L906 582 L906 579 L907 579 L907 574 L908 574 L908 562 L909 562 L909 537 L908 537 L908 536 L909 536 L909 535 L908 535 L908 533 L909 533 L909 532 L908 532 L908 409 L907 409 L906 401 L905 401 L905 399 L904 399 L902 393 L899 391 L899 389 L898 389 L897 387 L895 387 L893 384 L891 384 L891 383 L889 383 L889 382 L887 382 L887 381 L884 381 L884 380 L880 380 L880 379 L859 379 L859 378 Z"
+        fill-rule="evenodd" id="curax-mark"></path>
+      <lineargradient id="glass-body" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="#deffff" stop-opacity=".93"></stop>
+        <stop offset=".2" stop-color="#8bdcff" stop-opacity=".68"></stop>
+        <stop offset=".47" stop-color="#08597c" stop-opacity=".74"></stop>
+        <stop offset=".7" stop-color="#0eb4f6" stop-opacity=".78"></stop>
+        <stop offset="1" stop-color="#70d2fa" stop-opacity=".75"></stop>
+      </lineargradient>
+      <lineargradient id="glass-edge" x1="0" x2=".8" y1="0" y2="1">
+        <stop stop-color="#eeffff"></stop>
+        <stop offset=".4" stop-color="#8df5ff" stop-opacity=".65"></stop>
+        <stop offset=".6" stop-color="#0095b9" stop-opacity=".4"></stop>
+        <stop offset="1" stop-color="#aaf6ff"></stop>
+      </lineargradient>
+      <radialgradient cx=".25" cy=".1" id="glass-light" r=".9">
+        <stop stop-color="#fff" stop-opacity=".56"></stop>
+        <stop offset=".5" stop-color="#e9fbff" stop-opacity=".03"></stop>
+        <stop offset="1" stop-color="#abecff" stop-opacity="0"></stop>
+      </radialgradient>
+    </defs>
+  </svg>
+  <header class="nav" id="nav">
+    <a aria-label="CuraX home" class="brand" href="#home"><img alt="" aria-hidden="true" class="brand-symbol"
+        height="1254" src="assets/assets/curax-glass-alpha.webp" width="1254" /><span aria-hidden="true"
+        class="wordmark">Cura<span class="brand-x">X</span></span></a>
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="nav-toggle"
+      type="button"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+        <path d="M5 7h14M5 12h14M5 17h14"></path>
+      </svg></button>
+    <nav aria-label="Main navigation" class="nav-right" id="main-navigation"><a href="#download">Get started</a><a
+        href="#ecosystem">How it works</a><a href="#vision">Why CuraX?</a><a class="nav-action"
+        href="partners.html">Become a partner</a></nav>
   </header>
-
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <!-- Left: copy -->
-      <div class="fu">
-        <div class="kicker">
-          <div class="kicker-dot"></div>
-          <span class="kicker-txt">Launching 2026 · Hyderabad · Bengaluru · Chennai · Pune · Mumbai · Delhi </span>
-        </div>
-        <h1>
-          Introducing<br>
-          <span class="grad">CuraX</span> —<br>
-          Healthcare Reimagined.
-        </h1>
-        <p class="hero-sub">
-          Cura<span class="x-emp">X</span> is HLP Innovation's flagship healthcare marketplace — connecting patients
-          with clinics, hospitals, and
-          diagnostic centres across India. Powered by AI, built on AWS, designed for the real India.
-        </p>
-        <div class="checks">
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>Instant booking across clinics, hospitals and diagnostics</span>
-          </div>
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>AI-powered health records and digital treatment plans</span>
-          </div>
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>Real-time consultations and live appointment tracking</span>
-          </div>
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>Family multi-profile management — self and dependents</span>
-          </div>
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>DPDP Act 2023 compliant — your data, your control</span>
-          </div>
-          <div class="check">
-            <div class="check-ring">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                <path d="M2 6l3 3 5-5" stroke="#00c4b4" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <span>Partner App for clinics, hospitals and diagnostic centres</span>
-          </div>
-        </div>
-
-        <!-- city expansion -->
-        <div class="cities-row">
-          <div class="cities-lbl">Expanding Across India</div>
-          <div class="city-pills">
-            <span class="city-pill-live"><span class="city-live-dot"></span>Hyderabad</span>
-            <span class="city-pill-live"><span class="city-live-dot"></span>Secunderabad</span>
-            <span class="city-pill-live"><span class="city-live-dot"></span>Warangal</span>
-            <span class="city-pill-soon">Bengaluru</span>
-            <span class="city-pill-soon">Chennai</span>
-            <span class="city-pill-soon">Mumbai</span>
-            <span class="city-pill-soon">Delhi</span>
-            <span class="city-pill-soon">Pune</span>
-            <span class="city-pill-soon" style="border-style:dashed;color:rgba(255,255,255,.25)">+More</span>
-          </div>
-          <div class="city-note">Teal = Phase 1 launch &nbsp;·&nbsp; Grey = rolling out Q3 2026</div>
-        </div>
-
-        <div class="hero-btns">
-          <a href="#register" class="btn-primary">
-            Register for Early Access
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a href="mailto:hlpinnovations6@gmail.com" class="btn-secondary">I am a Clinic Partner</a>
+  <main>
+    <section aria-labelledby="hero-title" class="hero" id="home">
+      <div aria-hidden="true" class="landscape"><canvas aria-hidden="true" class="live-wallpaper"></canvas></div>
+      <div aria-hidden="true" class="grain"></div>
+      <!-- Glass logo with genuine alpha transparency, floating directly over the live canyon. -->
+      <div aria-hidden="true" class="glass-logo entrance">
+        <div class="logo-tilt">
+          <div class="original-logo"><img alt="" class="supplied-logo" fetchpriority="high" height="1254"
+              src="assets/assets/curax-glass-alpha.webp" width="1254" /></div>
         </div>
       </div>
-
-      <!-- Right: registration card -->
-      <div class="reg-card fu" id="register" style="transition-delay:.12s">
-        <div class="reg-title">Join the Waitlist</div>
-        <div class="reg-sub">Be among the first 500 to receive exclusive early access and launch benefits.</div>
-
-        <div class="offer-box">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.7"
-            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px">
-            <polyline points="20 12 20 22 4 22 4 12" />
-            <rect x="2" y="7" width="20" height="5" />
-            <line x1="12" y1="22" x2="12" y2="7" />
-            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
-            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
-          </svg>
-          <div class="offer-txt">
-            <strong>Early Bird Offer:</strong> First 500 registrants receive 1 month free on the Partner Plan
-            (worth &#8377;30,000+) plus priority onboarding support.
+      <div class="hero-content" id="hero-content">
+        <p class="hero-meta entrance"><span aria-hidden="true" class="status-dot"></span>For patients. For providers.
+        </p>
+        <!-- Layout placeholder keeps the logo and typography in their original positions. -->
+        <div aria-hidden="true" class="logo-slot"></div>
+        <h1 aria-label="CuraX" class="entrance wordmark" id="hero-title"><span aria-hidden="true">Cura<span
+              class="brand-x">X</span></span></h1>
+        <p class="subtitle entrance">CLARITY BEFORE CARE....</p>
+        <div aria-label="Download CuraX User App" class="app-downloads entrance" id="download">
+          <div class="store-row">
+            <a aria-label="CuraX on Google Play, coming soon" class="store-badge" data-open="app-launch"
+              data-store="googlePlay" href="#app-launch" id="google-play-button">
+              <svg aria-hidden="true" viewbox="0 0 28 32">
+                <path d="M2 2.2v27.6L16.6 16Z" fill="#35d5a0"></path>
+                <path d="M2 2.2 19.7 12.4 16.6 16Z" fill="#55c1f8"></path>
+                <path d="m19.7 12.4 5.8 3.3c.4.2.4.4 0 .6l-5.8 3.3L16.6 16Z" fill="#ffcf53"></path>
+                <path d="M2 29.8 19.7 19.6 16.6 16Z" fill="#fa6e81"></path>
+              </svg>
+              <span><small>COMING SOON ON</small><strong>Google Play</strong></span>
+            </a>
+            <a aria-label="CuraX on the App Store, coming soon" class="store-badge" data-open="app-launch"
+              data-store="appleAppStore" href="#app-launch" id="app-store-button">
+              <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 28">
+                <path
+                  d="M16.2 4.3c.9-1.1 1.5-2.5 1.4-4-1.4.1-3 .9-3.9 2-.9 1-1.6 2.5-1.4 3.9 1.5.1 3-.7 3.9-1.9ZM20.8 14.5c0-3.5 2.9-5.2 3-5.3-1.7-2.5-4.2-2.8-5.1-2.9-2.2-.2-4.2 1.3-5.3 1.3-1.1 0-2.8-1.3-4.6-1.2-2.4 0-4.6 1.4-5.8 3.5-2.5 4.3-.6 10.7 1.8 14.2 1.2 1.7 2.5 3.5 4.3 3.4 1.7-.1 2.4-1.1 4.5-1.1 2.1 0 2.7 1.1 4.6 1 1.9 0 3-1.7 4.1-3.4 1.3-1.9 1.8-3.7 1.8-3.8-.1 0-3.3-1.3-3.3-5.7Z"
+                  transform="translate(-1 0) scale(.9)"></path>
+              </svg>
+              <span><small>COMING SOON ON</small><strong>App Store</strong></span>
+            </a>
           </div>
+          <p class="app-availability">CuraX User App · Coming soon to Android &amp; iOS</p>
         </div>
-
-        <form class="form" id="waitlistForm">
-          <input class="inp" type="text" id="wl-name" placeholder="Your Full Name *" required>
-          <input class="inp" type="email" id="wl-email" placeholder="Email Address *" required>
-          <input class="inp" type="tel" id="wl-phone" placeholder="Phone Number (+91...)">
-
-          <select class="sel" id="wl-entity" required>
-            <option value="" disabled selected>I am a... *</option>
-            <option value="Patient">Patient seeking healthcare</option>
-            <option value="Clinic">Clinic / Doctor (Partner)</option>
-            <option value="Hospital">Hospital / Medical Centre (Partner)</option>
-            <option value="Diagnostic Labs">Diagnostic Centre (Partner)</option>
-            <option value="Investor">Investor / Advisor</option>
-            <option value="Other">Other</option>
-          </select>
-
-          <div id="wl-group-wrap">
-            <select class="sel" id="wl-group">
-              <option value="" disabled selected>Select group</option>
-            </select>
-          </div>
-
-          <div id="wl-facility-wrap">
-            <select class="sel" id="wl-facility-type">
-              <option value="" disabled selected>Select facility type</option>
-            </select>
-          </div>
-
-          <select class="sel" id="wl-city" required>
-            <option value="" disabled selected>Select your city *</option>
-          </select>
-
-          <button type="submit" class="sub-btn">Secure My Early Access</button>
+        <form aria-label="Subscribe to CuraX updates" class="signup entrance" id="subscribe">
+          <label class="sr-only" for="email">Email address</label>
+          <div class="email-shell"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+              <rect height="14" rx="3" width="18" x="3" y="5"></rect>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg><input autocomplete="email" id="email" maxlength="254" name="email" placeholder="Your email address"
+              required="" type="email" /><button class="subscribe" type="submit">Subscribe</button></div>
+          <label class="consent"><input id="consent" required="" type="checkbox" /><span>I agree to receive CuraX
+              updates. <button class="text-button" data-open="privacy" type="button">Privacy</button></span></label>
+          <p class="fine-note">Send your request by email. Thoughtful updates, only.</p>
+          <p class="form-status" hidden="" id="form-status" role="status"></p>
+          <noscript>
+            <p class="fine-note">Email <a
+                href="mailto:curaxapp@gmail.com?subject=CuraX%20updates">curaxapp@gmail.com</a> to request updates.</p>
+          </noscript>
         </form>
-
-        <div class="privacy-note">Your data is protected. We never share your information.</div>
-
-        <div class="spots-row">
-          <span>Spots remaining:</span>
-          <span class="spots-num" id="spotNum">--</span>
-          <span>of 500</span>
-        </div>
       </div>
-  </section>
-
-  <section class="section section-dark" id="getstarted">
-    <div class="section-inner">
-      <div class="fu">
-        <div class="section-tag">How It Works</div>
-        <h2 class="section-title">Get Started in Minutes</h2>
-        <p class="section-desc">Whether you are a patient or a healthcare provider, Cura<span class="x-emp">X</span> is
-          designed to be up and
-          running immediately.</p>
+      <div class="hero-bottom entrance"><span class="coordinate">HYDERABAD, INDIA<br /><span
+            style="opacity:.5;line-height:2.4">17.3850° N   78.4867° E</span></span><a class="scroll-cue"
+          href="#vision"><span>SCROLL TO DISCOVER</span><span aria-hidden="true" class="line"></span></a>
+        <div class="edition">CLARITY BEFORE CARE.<br /><span style="opacity:.5">A CURAX VISION</span><button
+            class="wallpaper-toggle" type="button">Pause background</button></div>
       </div>
-      <div style="margin-bottom:48px">
-        <div
-          style="font-size:13px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px">
-          For Patients</div>
-        <div class="steps">
-          <div class="step fu">
-            <div class="step-num">1</div>
-            <div class="step-title">Download the App</div>
-            <div class="step-desc">Available on iOS and Android. Sign up with your phone number in under 60 seconds.
-            </div>
-          </div>
-          <div class="step fu" style="transition-delay:.08s">
-            <div class="step-num">2</div>
-            <div class="step-title">Search</div>
-            <div class="step-desc">Find clinics, doctors, and diagnostic labs near you.
-            </div>
-          </div>
-          <div class="step fu" style="transition-delay:.16s">
-            <div class="step-num">3</div>
-            <div class="step-title">Book &amp; Pay</div>
-            <div class="step-desc">Confirm your slot instantly and pay securely via UPI, card, or Cura<span
-                class="x-emp">X</span> Wallet.
-            </div>
-          </div>
-          <div class="step fu" style="transition-delay:.24s">
-            <div class="step-num">4</div>
-            <div class="step-title">Visit &amp; Get Records</div>
-            <div class="step-desc">QR check-in at the clinic. Prescriptions and reports stored automatically in your
-              health record.</div>
-          </div>
-        </div>
+    </section>
+    <section aria-labelledby="vision-title" class="section vision" id="vision">
+      <div class="reveal">
+        <p class="eyebrow">01 / Why CuraX?</p>
+        <h2 id="vision-title">Care, considered.<br /><span class="dim">Connection, by design.</span></h2>
       </div>
-      <div>
-        <div
-          style="font-size:13px;font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px">
-          For Clinic &amp; Hospital Partners</div>
-        <div class="steps">
-          <div class="step fu">
-            <div class="step-num">1</div>
-            <div class="step-title">Register Your Clinic</div>
-            <div class="step-desc">Our team handles onboarding. Go live on Cura<span class="x-emp">X</span> within 48
-              hours of submission.
-            </div>
-          </div>
-          <div class="step fu" style="transition-delay:.08s">
-            <div class="step-num">2</div>
-            <div class="step-title">Set Up Services</div>
-            <div class="step-desc">Add your doctors, services, pricing, and slot availability via the Partner App.</div>
-          </div>
-          <div class="step fu" style="transition-delay:.16s">
-            <div class="step-num">3</div>
-            <div class="step-title">Receive Bookings</div>
-            <div class="step-desc">Appointments arrive in real time. Manage your queue, consultations, and billing from
-              one screen.</div>
-          </div>
-          <div class="step fu" style="transition-delay:.24s">
-            <div class="step-num">4</div>
-            <div class="step-title">Grow Your Practice</div>
-            <div class="step-desc">Access analytics, patient insights, and settlement reports to drive growth month on
-              month.</div>
-          </div>
-        </div>
+      <div class="reveal" style="--delay:140ms">
+        <p class="body-copy">Better care begins with clarity. CuraX brings a connected vision to healthcare — one that
+          puts patients, providers and the care between them in the same picture.</p><a class="subtle-link"
+          href="#ecosystem">Explore the CuraX vision<svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+            <path d="M4 12h15m-6-6 6 6-6 6"></path>
+          </svg></a>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="howitworks">
-    <div class="section-inner">
-
-      <!-- Header animation -->
-      <div class="fu">
-        <span class="section-tag">Process</span>
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">
-          Get your facility listed on Cura<span class="x-emp">X</span> in three simple steps.
-        </p>
-      </div>
-
-      <br>
-
-      <!-- Steps -->
-      <div class="process-list">
-
-        <div class="process-item fu">
-          <div class="process-num">1</div>
-          <div class="process-content">
-            <h4>Choose Your Category</h4>
-            <p>Select from Clinic, Hospital, Diagnostic Centre, or Veterinary Facility.</p>
-          </div>
-        </div>
-
-        <div class="process-item fu" style="transition-delay:.08s">
-          <div class="process-num">2</div>
-          <div class="process-content">
-            <h4>Fill Registration Form</h4>
-            <p>Quick 2-step form — just your basic details. No documents needed right now.</p>
-          </div>
-        </div>
-
-        <div class="process-item fu" style="transition-delay:.16s">
-          <div class="process-num">3</div>
-          <div class="process-content">
-            <h4>Our Team Contacts You</h4>
-            <p>A Cura<span class="x-emp">X</span> partner success manager will reach out within 24 hours to complete
-              onboarding.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Offer strip -->
-      <div class="offer-strip fu" style="transition-delay:.24s">
-        <div class="offer-strip-txt">
-          <div class="offer-strip-ttl">Limited Early Bird Offer for Clinic Partners</div>
-          <div class="offer-strip-sub">
-            Register before launch and receive 1 month free on the Cura<span class="x-emp">X</span> Partner Plan,
-            priority onboarding support, and a dedicated Account Manager to get your clinic live on day one.
-          </div>
-        </div>
-
+    </section>
+    <div aria-hidden="true" class="line-rule"></div>
+    <section aria-labelledby="ecosystem-title" class="section ecosystem" id="ecosystem">
+      <div class="section-heading reveal">
         <div>
-          <div class="offer-badge">
-            <div class="offer-badge-val">1 Month</div>
-            <div class="offer-badge-sub">FREE Partner Plan</div>
-            <div style="font-size:11px;color:rgba(245,158,11,.6);margin-top:4px">
-              Worth ₹30,000+
-            </div>
-          </div>
-
-          <a href="#register" class="btn-primary" style="margin-top:14px;display:flex;justify-content:center">
-            Claim Your Spot
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <p class="eyebrow">02 / How it works</p>
+          <h2 id="ecosystem-title">Two sides.<br /><span class="dim">A more complete picture.</span></h2>
         </div>
+        <p>The CuraX ecosystem is taking shape.<br />Hyderabad first.</p>
       </div>
-
-    </div>
-  </section>
-
-  <section class="section section-dark" id="whycurax">
-    <div class="section-inner">
-      <span class="section-tag">Why Cura<span class="x-emp">X</span></span>
-      <h2 class="section-title">Built for Indian<br>Healthcare Partners</h2>
-      <p class="partner-benefits-desc">
-        Cura<span class="x-emp">X</span> is designed from the ground up for the realities of Indian healthcare —
-        affordable, digital, and patient-first.
-      </p>
-
-      <div class="partner-benefits-grid">
-
-        <div class="partner-benefit-card">
-          <div class="partner-benefit-icon-wrap partner-benefit-icon-blue">
-            <img src="./assets/icons/icon-clinic.svg" alt="More Patient Bookings" width="22" height="22">
-          </div>
-          <div class="partner-benefit-content">
-            <h4>More Patient Bookings</h4>
-            <p>Get discovered by patients actively searching for your specialty in your city.</p>
-          </div>
-        </div>
-
-        <div class="partner-benefit-card">
-          <div class="partner-benefit-icon-wrap partner-benefit-icon-green">
-            <img src="./assets/icons/icon-verified-listings.svg" alt="Smart Analytics Dashboard" width="22" height="22">
-          </div>
-          <div class="partner-benefit-content">
-            <h4>Smart Analytics Dashboard</h4>
-            <p>Track appointments, patient trends, and revenue insights in real time.</p>
-          </div>
-        </div>
-
-        <div class="partner-benefit-card">
-          <div class="partner-benefit-icon-wrap partner-benefit-icon-orange">
-            <img src="./assets/icons/icon-diagnostic.svg" alt="Digital Records and Reports" width="22" height="22">
-          </div>
-          <div class="partner-benefit-content">
-            <h4>Digital Records &amp; Reports</h4>
-            <p>Manage prescriptions, lab reports, and patient history digitally.</p>
-          </div>
-        </div>
-
-        <div class="partner-benefit-card">
-          <div class="partner-benefit-icon-wrap partner-benefit-icon-yellow">
-            <img src="./assets/icons/icon-early-bird.svg" alt="Dedicated Partner Support" width="22" height="22">
-          </div>
-          <div class="partner-benefit-content">
-            <h4>Dedicated Partner Support</h4>
-            <p>Onboarding assistance, training, and a dedicated success manager for your facility.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="partner-benefits-cta">
-        <a href="#register" class="btn-primary">
-          Join CuraX — Register Free
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M5 12h14M12 5l7 7-7 7" />
+      <div class="glass-grid">
+        <article class="glass-card patient-card reveal" style="--delay:70ms">
+          <svg aria-hidden="true" class="card-pulse" focusable="false">
+            <rect class="pulse-trail" pathlength="100" rx="15" x="1" y="1"></rect>
+            <rect class="pulse-head" pathlength="100" rx="15" x="1" y="1"></rect>
           </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-logo">
-        <img class="footer-logo-img" src="./assets/logo/curax-logo.png" alt="CuraX" width="110" height="32" />
-        <div class="nav-logo-sep"></div>
-        <div class="nav-logo-tag">Cura<span class="x-emp-logo">X</span></div>
-      </div>
-      <p class="footer-tagline">
-        India's smartest healthcare marketplace — connecting patients with trusted care providers since 2026.
-      </p>
-
-      <!-- Contact Details -->
-      <div class="footer-contact">
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
-            <path
-              d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.172a.5.5 0 0 1 .447.276l1 2a.5.5 0 0 1-.114.568L4.9 5.95a7.5 7.5 0 0 0 5.15 5.15l1.106-1.105a.5.5 0 0 1 .568-.114l2 1a.5.5 0 0 1 .276.447V12.5A1.5 1.5 0 0 1 12.5 14C6.701 14 2 9.299 2 3.5Z"
-              stroke="rgba(255,255,255,0.5)" stroke-width="1.2" />
+          <div class="card-top"><svg aria-hidden="true" class="icon" viewbox="0 0 32 32">
+              <circle cx="16" cy="10" r="4.5"></circle>
+              <path d="M7 27v-3a9 9 0 0 1 18 0v3"></path>
+            </svg><span class="card-tag">For patients · Planned</span></div>
+          <h3>Your care. In perspective.</h3>
+          <p>CuraX User App — a patient experience designed around understanding options, keeping records and staying
+            connected through care.</p>
+          <div class="card-bottom"><span>Understand</span><span>Connect</span><span>Continue</span></div>
+          <div class="card-actions"><a class="subtle-link" href="#download">Explore the app <span
+                aria-hidden="true">↗</span></a><button aria-label="Pause patient card border animation"
+              aria-pressed="false" class="pulse-control" hidden="" type="button">Pause glow</button></div>
+        </article>
+        <article class="glass-card reveal provider-card" style="--delay:200ms"><svg aria-hidden="true"
+            class="card-pulse" focusable="false">
+            <rect class="pulse-trail" pathlength="100" rx="15" x="1" y="1"></rect>
+            <rect class="pulse-head" pathlength="100" rx="15" x="1" y="1"></rect>
           </svg>
-          <a href="tel:+919652294557">+91 96522 94557</a>
+          <div class="card-top"><svg aria-hidden="true" class="icon" viewbox="0 0 32 32">
+              <rect height="21" rx="2" width="22" x="5" y="6"></rect>
+              <path d="M16 11v8m-4-4h8M12 27v-4h8v4"></path>
+            </svg><span class="card-tag">For providers · Planned</span></div>
+          <h3>More connected care.</h3>
+          <p>CuraX Partner — a shared vision for clinics, diagnostic centres and hospitals to connect their services,
+            workflows and patient journeys.</p>
+          <div class="card-bottom"><span>Coordinate</span><span>Manage</span><span>Follow through</span></div>
+          <div class="card-actions"><a class="subtle-link" href="partners.html">Explore CuraX Partner <span
+                aria-hidden="true">↗</span></a><button aria-label="Pause provider card border animation"
+              aria-pressed="false" class="pulse-control" hidden="" type="button">Pause glow</button></div>
+        </article>
+      </div>
+    </section>
+    <div aria-hidden="true" class="line-rule"></div>
+    <section aria-labelledby="invitation-title" class="invitation">
+      <div class="reveal">
+        <p class="eyebrow">03 / An invitation</p>
+        <h2 id="invitation-title">A clearer future.<br /><span class="dim">Be part of the beginning.</span></h2>
+        <p>Follow the journey as CuraX takes shape.<br />For people seeking care. For those providing it.</p><a
+          href="#subscribe" id="join-link">Stay connected<svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+            <path d="M7 17 17 7M7 7h10v10"></path>
+          </svg></a>
+        <div class="location">HYDERABAD FIRST.   INDIA IN MIND.</div>
+      </div>
+    </section>
+  </main>
+  <footer aria-label="CuraX footer" class="legacy-footer">
+    <div class="legacy-footer-inner">
+      <div class="legacy-footer-primary">
+        <div class="legacy-footer-about">
+          <a aria-label="CuraX home" class="legacy-footer-brand" href="index.html"><img alt="" height="46"
+              loading="lazy" src="assets/assets/curax-glass-alpha.webp" width="46" /><span>Cura<span
+                class="legacy-footer-x">X</span></span></a>
+          <p class="legacy-footer-tagline">India's smartest healthcare marketplace — connecting patients with trusted
+            care providers since 2026.</p>
         </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
-            <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" />
-            <path d="M1 5l7 5 7-5" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" />
-          </svg>
-          <a href="mailto:curaxapp@gmail.com">curaxapp@gmail.com</a>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
-            <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" />
-            <path d="M1 5l7 5 7-5" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" />
-          </svg>
-          <a href="mailto:lalit.haridasu@hlpinnovations.com">lalit.haridasu@hlpinnovations.com</a>
-        </div>
-        <div class="social-links mt-3">
-          <a class="youtube" href="https://www.youtube.com/@CuraX_India"
-            target="_blank" title="Visit us on youtube" rel="noopener noreferrer">
-            <img src="assets/images/youtube.png" alt="Youtube" class="social-icon" loading="lazy">
-          </a>
-          <a class="instagram" href="https://www.instagram.com/curax_india/" 
-            target="_blank" title="Visit us on Instagram" rel="noopener noreferrer">
-            <img src="assets/images/instagram.png" alt="Instagram" class="social-icon" loading="lazy">
-          </a>
-          <a class="linkedin" target="_blank" title="Visit us on LinkedIn" rel="noopener noreferrer">
-            <img src="assets/images/linkedin.png" alt="LinkedIn" class="social-icon" loading="lazy">
-          </a>
-          <a class="whatsapp" href="https://wa.me/919652294557?text=Hello%20I%20am%20interested%20in%20your%20services"
-            target="_blank" title="Connect with us on WhatsApp" rel="noopener noreferrer">
-
-            <img src="assets/images/whatsapp.png" alt="WhatsApp" class="social-icon" loading="lazy">
-          </a>
+        <div aria-label="Contact details" class="legacy-footer-contact">
+          <a href="tel:+919652294557"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              viewbox="0 0 24 24">
+              <path
+                d="M6.4 3.5 9 6.4 7.4 9c1.2 3.3 4.2 6.3 7.6 7.6l2.5-1.6 3 2.6-1.1 3.3c-.2.6-.7 1-1.4 1-7.9 0-14.5-6.5-14.5-14.5 0-.6.4-1.2 1-1.4Z">
+              </path>
+            </svg><span>+91 96522 94557</span></a>
+          <a href="mailto:curaxapp@gmail.com"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              viewbox="0 0 24 24">
+              <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg><span>curaxapp@gmail.com</span></a>
+          <a href="mailto:lalit.haridasu@hlpinnovations.com"><svg aria-hidden="true" class="legacy-footer-icon"
+              fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              viewbox="0 0 24 24">
+              <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg><span>lalit.haridasu@hlpinnovations.com</span></a>
+          <div aria-label="CuraX social media" class="legacy-footer-socials">
+            <a aria-label="CuraX on YouTube" href="https://www.youtube.com/@CuraX_India" rel="noopener noreferrer"
+              target="_blank"><svg aria-hidden="true" class="legacy-footer-icon" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+                <rect height="12" rx="4" width="18" x="3" y="6"></rect>
+                <path d="m10 9 5 3-5 3z"></path>
+              </svg></a>
+            <a aria-label="CuraX on Instagram" href="https://www.instagram.com/curax_india/" rel="noopener noreferrer"
+              target="_blank"><svg aria-hidden="true" class="legacy-footer-icon" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+                <rect height="18" rx="5" width="18" x="3" y="3"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.3" cy="6.8" r="1"></circle>
+              </svg></a>
+            <span aria-label="LinkedIn URL not supplied" class="legacy-footer-social-disabled"
+              title="LinkedIn URL not supplied"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                viewbox="0 0 24 24">
+                <rect height="18" rx="2" width="18" x="3" y="3"></rect>
+                <path d="M8 10v7M8 7v.1M12 17v-7m0 3a3 3 0 0 1 6 0v4"></path>
+              </svg></span>
+            <a aria-label="Message CuraX on WhatsApp"
+              href="https://wa.me/919652294557?text=Hello%20I%20am%20interested%20in%20your%20services"
+              rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                viewbox="0 0 24 24">
+                <path d="M20 11.5a8 8 0 0 1-11.6 7.2L4 20l1.3-4.3A8 8 0 1 1 20 11.5Z"></path>
+                <path d="M9 9c1 3 3 5 6 6l1.2-1.2-2-1-1 1c-1.6-.7-2.6-1.7-3.3-3.3l1-1-1-2z"></path>
+              </svg></a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./index.html">For Partners</a>
-        <a>Register Clinic</a>
-        <a>Register Hospital</a>
-        <a>Register Diagnostic</a>
+      <nav aria-label="Footer navigation" class="legacy-footer-navigation">
+        <a href="index.html">Home</a><a href="partners.html">For Partners</a>
+        <a href="partners.html#facilities">Register Clinic</a><a href="partners.html#facilities">Register Hospital</a><a
+          href="partners.html#facilities">Register Diagnostic</a>
+      </nav>
+      <div class="legacy-footer-bottom">
+        <p>© 2026 Cura<span class="legacy-footer-x">X</span>. All rights reserved.</p>
+        <div class="legacy-footer-legal"><a data-footer-privacy="" href="index.html#privacy">Privacy Policy</a><span
+            aria-hidden="true">|</span><span title="Terms page not provided">Terms of Use <small>(coming
+              soon)</small></span></div>
+        <p class="legacy-footer-company">A product of HLP Innovations Pvt Ltd</p>
       </div>
-      <p class="footer-bottom">
-        &copy; 2026 Cura<span class="x-emp">X</span>. All rights reserved. |
-        <a href="#" style="color:rgba(255,255,255,0.5);">Privacy Policy</a> |
-        <a href="#" style="color:rgba(255,255,255,0.5);">Terms of Use</a>
-      </p>
-      <p class="footer-hlp">A product of HLP Innovations Pvt Ltd</p>
+      <button aria-label="Turn off cursor glow" aria-pressed="true" class="cursor-toggle legacy-footer-cursor" hidden=""
+        type="button">Cursor glow: On</button>
     </div>
   </footer>
-
-  <div id="toast" class="toast"></div>
-
-  <script src="script.js" defer></script>
+  <button aria-label="Back to top" class="back-top" hidden="" type="button"><svg aria-hidden="true" class="icon"
+      viewbox="0 0 24 24">
+      <path d="m6 13 6-6 6 6M12 7v12"></path>
+    </svg></button>
+  <dialog aria-labelledby="privacy-title" id="privacy"><button aria-label="Close privacy information"
+      class="close-dialog" type="button">×</button>
+    <h2 id="privacy-title">Your request. Your choice.</h2>
+    <p>This preview opens a subscription request in your email app. Review and send the email to CuraX to request
+      updates. Your email address is not stored by this page.</p>
+    <p>Your request includes your email address and your consent to receive CuraX updates. You can ask the CuraX team to
+      stop updates at any time by emailing <a href="mailto:curaxapp@gmail.com">curaxapp@gmail.com</a>.</p>
+    <p class="dialog-note">Google Fonts loads the Poppins typeface. This preview does not use analytics, advertising
+      cookies or health data. Your cursor glow preference is saved only in this browser.</p>
+  </dialog>
+  <dialog aria-labelledby="access-title" id="accessibility"><button aria-label="Close accessibility information"
+      class="close-dialog" type="button">×</button>
+    <h2 id="access-title">A considered experience.</h2>
+    <p>This page supports keyboard navigation, visible focus states, labelled inputs and reduced-motion settings. When
+      reduced motion is enabled on your device, the live wallpaper, floating, parallax and entrance animations are
+      disabled. You can also pause the background using the control in the hero, or pause the patient card’s border glow
+      using its own control. The optional cursor glow is disabled for touch input and reduced motion, and can be turned
+      off in the footer.</p>
+    <p>For assistance or feedback, contact <a href="mailto:curaxapp@gmail.com">curaxapp@gmail.com</a>.</p>
+  </dialog>
+  <dialog aria-labelledby="app-launch-title" id="app-launch"><button aria-label="Close app availability"
+      class="close-dialog" type="button">×</button>
+    <p class="eyebrow">CuraX User App</p>
+    <h2 id="app-launch-title">Clarity is coming.</h2>
+    <p>The CuraX User App is coming soon. Download links will be available here once the app is published on Google Play
+      and the App Store.</p>
+    <div class="app-dialog-actions"><a data-launch-updates="" href="#subscribe">Request launch updates</a><a
+        href="partners.html">Become a partner <span aria-hidden="true">↗</span></a></div>
+  </dialog>
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/live-wallpaper.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/section-lighting.js"></script>
+  <script src="assets/js/cursor-glow.js"></script>
 </body>
+
+</html>

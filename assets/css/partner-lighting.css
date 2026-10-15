@@ -1,0 +1,14 @@
+/* The same cyan light language as the patient page, behind partner content. */
+#partner-home:after{content:'';position:absolute;pointer-events:none;z-index:-1;left:-8%;right:-8%;bottom:-80px;height:78%;background:conic-gradient(from -24deg at 73% 100%,transparent 0deg,#0eb4f60d 10deg,#45d5ff24 24deg,#0eb4f60d 38deg,transparent 48deg),radial-gradient(ellipse at 73% 100%,#0eb4f630,transparent 62%);filter:blur(28px);mask-image:linear-gradient(transparent,#000 62%);-webkit-mask-image:linear-gradient(transparent,#000 62%)}
+
+#why,#features{position:relative;isolation:isolate;overflow:hidden}
+#why:before,#why:after,#features:before{content:'';position:absolute;pointer-events:none;z-index:-1}
+#why:before{inset:0;background:radial-gradient(ellipse at 4% 62%,#0eb4f62e,transparent 68%);filter:blur(28px);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 72%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 72%,transparent)}
+#why:after{left:-16%;top:8%;width:92%;height:90%;background:conic-gradient(from 55deg at 0% 65%,transparent 0deg,#39cfff0d 14deg,#69dcff21 26deg,#0eb4f60b 39deg,transparent 52deg);filter:blur(22px);mask-image:linear-gradient(90deg,transparent 15%,#000 30%,transparent 92%);-webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 30%,transparent 92%)}
+#features:before{left:-8%;right:-8%;bottom:-70px;height:78%;background:conic-gradient(from -26deg at 66% 100%,transparent 0deg,#0eb4f60b 10deg,#45d5ff1d 26deg,#0eb4f60b 42deg,transparent 52deg),radial-gradient(ellipse at 66% 100%,#0eb4f629,transparent 65%);filter:blur(28px);mask-image:linear-gradient(transparent,#000 58%);-webkit-mask-image:linear-gradient(transparent,#000 58%)}
+
+/* A bright source below the invitation fans upward into a soft cyan beam. */
+.finale{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(130deg,#0f2e3f30,#08131d44)}
+.finale:before{content:'';position:absolute;pointer-events:none;z-index:-1;left:-8%;right:-8%;bottom:-70px;height:115%;background:conic-gradient(from -26deg at 50% 100%,transparent 0deg,#0eb4f612 10deg,#45d5ff30 26deg,#0eb4f612 42deg,transparent 52deg),radial-gradient(ellipse at 50% 100%,#0eb4f647,transparent 65%);filter:blur(24px);mask-image:linear-gradient(transparent,#000 48%);-webkit-mask-image:linear-gradient(transparent,#000 48%)}
+.finale:after{content:'';position:absolute;pointer-events:none;z-index:-1;left:18%;right:18%;bottom:-105px;height:240px;background:radial-gradient(ellipse at 50% 80%,#a3eeff66 0%,#0eb4f638 30%,transparent 70%);filter:blur(35px)}
+@media(max-width:680px){#partner-home:after{height:64%;left:-25%;right:-25%;background-position:center;bottom:-60px}#why:after{left:-28%;width:128%;height:85%}#features:before{left:-20%;right:-20%}.finale:before{left:-30%;right:-30%;height:100%;bottom:-55px}.finale:after{left:8%;right:8%}}
