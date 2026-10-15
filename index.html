@@ -19,6 +19,7 @@
   <link as="image" fetchpriority="high" href="assets/assets/cyan-canyon-hd.webp" media="(max-width:760px)"
     rel="preload" />
   <link href="assets/css/home.css" rel="stylesheet" />
+  <link href="assets/css/curax-dynamic-tagline.css?v=1" rel="stylesheet" />
   <link href="assets/css/section-lighting.css" rel="stylesheet" />
   <link href="assets/css/cursor-glow.css" rel="stylesheet" />
   <!-- Search engine and social sharing metadata -->
@@ -31,11 +32,11 @@
     content="CuraX. Clarity before care. Explore the patient app and CuraX Partner for clinics, diagnostics and hospitals. Hyderabad first."
     property="og:description" />
   <meta content="https://www.curax.life/" property="og:url" />
-  <meta content="https://www.curax.life/assets/assets/curax-glass-alpha.webp" property="og:image" />
+  <meta property="og:image" content="https://www.curax.life/assets/assets/curax-logo.png">
   <meta content="CuraX brand logo" property="og:image:alt" />
   <meta content="summary" name="twitter:card" />
   <script
-    type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CuraX","url":"https://www.curax.life/","logo":"https://www.curax.life/assets/assets/curax-glass-alpha.webp"}</script>
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CuraX","url":"https://www.curax.life/","logo":"https://www.curax.life/assets/assets/curax-logo.png"}</script>
   <link href="assets/css/footer.css" rel="stylesheet" />
 </head>
 
@@ -68,9 +69,8 @@
     </defs>
   </svg>
   <header class="nav" id="nav">
-    <a aria-label="CuraX home" class="brand" href="#home"><img alt="" aria-hidden="true" class="brand-symbol"
-        height="1254" src="assets/assets/curax-glass-alpha.webp" width="1254" /><span aria-hidden="true"
-        class="wordmark">Cura<span class="brand-x">X</span></span></a>
+    <a aria-label="CuraX home" class="brand" href="#home"><span aria-hidden="true" class="wordmark">Cura<span
+          class="brand-x">X</span></span></a>
     <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="nav-toggle"
       type="button"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
         <path d="M5 7h14M5 12h14M5 17h14"></path>
@@ -87,19 +87,35 @@
       <div aria-hidden="true" class="glass-logo entrance">
         <div class="logo-tilt">
           <div class="original-logo"><img alt="" class="supplied-logo" fetchpriority="high" height="1254"
-              src="assets/assets/curax-glass-alpha.webp" width="1254" /></div>
+              src="assets/assets/curax-logo.png" width="1254" /></div>
         </div>
       </div>
       <div class="hero-content" id="hero-content">
-        <p class="hero-meta entrance"><span aria-hidden="true" class="status-dot"></span>For patients. For providers.
-        </p>
         <!-- Layout placeholder keeps the logo and typography in their original positions. -->
         <div aria-hidden="true" class="logo-slot"></div>
         <h1 aria-label="CuraX" class="entrance wordmark" id="hero-title"><span aria-hidden="true">Cura<span
               class="brand-x">X</span></span></h1>
-        <p class="subtitle entrance">CLARITY BEFORE CARE....</p>
+
+
+        <div class="curax-rotating-tagline">
+          <span class="curax-tagline-balance" aria-hidden="true"></span>
+
+          <span class="curax-tagline-fixed">
+            A better way to
+          </span>
+
+          <span class="curax-tagline-window">
+            <span id="curaxDynamicText">Understand care.</span>
+          </span>
+        </div>
+
+
         <div aria-label="Download CuraX User App" class="app-downloads entrance" id="download">
           <div class="store-row">
+            <svg aria-hidden="true" class="card-pulse" focusable="false">
+            <rect class="pulse-trail" pathlength="100" rx="15" x="1" y="1"></rect>
+            <rect class="pulse-head" pathlength="100" rx="15" x="1" y="1"></rect>
+          </svg>
             <a aria-label="CuraX on Google Play, coming soon" class="store-badge" data-open="app-launch"
               data-store="googlePlay" href="#app-launch" id="google-play-button">
               <svg aria-hidden="true" viewbox="0 0 28 32">
@@ -120,30 +136,13 @@
               <span><small>COMING SOON ON</small><strong>App Store</strong></span>
             </a>
           </div>
-          <p class="app-availability">CuraX User App · Coming soon to Android &amp; iOS</p>
+          <p class="app-availability">CuraX User · Coming soon to Android &amp; iOS</p>
         </div>
-        <form aria-label="Subscribe to CuraX updates" class="signup entrance" id="subscribe">
-          <label class="sr-only" for="email">Email address</label>
-          <div class="email-shell"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
-              <rect height="14" rx="3" width="18" x="3" y="5"></rect>
-              <path d="m4 7 8 6 8-6"></path>
-            </svg><input autocomplete="email" id="email" maxlength="254" name="email" placeholder="Your email address"
-              required="" type="email" /><button class="subscribe" type="submit">Subscribe</button></div>
-          <label class="consent"><input id="consent" required="" type="checkbox" /><span>I agree to receive CuraX
-              updates. <button class="text-button" data-open="privacy" type="button">Privacy</button></span></label>
-          <p class="fine-note">Send your request by email. Thoughtful updates, only.</p>
-          <p class="form-status" hidden="" id="form-status" role="status"></p>
-          <noscript>
-            <p class="fine-note">Email <a
-                href="mailto:curaxapp@gmail.com?subject=CuraX%20updates">curaxapp@gmail.com</a> to request updates.</p>
-          </noscript>
-        </form>
       </div>
       <div class="hero-bottom entrance"><span class="coordinate">HYDERABAD, INDIA<br /><span
             style="opacity:.5;line-height:2.4">17.3850° N   78.4867° E</span></span><a class="scroll-cue"
           href="#vision"><span>SCROLL TO DISCOVER</span><span aria-hidden="true" class="line"></span></a>
-        <div class="edition">CLARITY BEFORE CARE.<br /><span style="opacity:.5">A CURAX VISION</span><button
-            class="wallpaper-toggle" type="button">Pause background</button></div>
+        <div class="edition">CLARITY BEFORE CARE.<br /><span style="opacity:.5">A CURAX VISION</span></div>
       </div>
     </section>
     <section aria-labelledby="vision-title" class="section vision" id="vision">
@@ -179,12 +178,11 @@
               <path d="M7 27v-3a9 9 0 0 1 18 0v3"></path>
             </svg><span class="card-tag">For patients · Planned</span></div>
           <h3>Your care. In perspective.</h3>
-          <p>CuraX User App — a patient experience designed around understanding options, keeping records and staying
+          <p>CuraX User — a patient experience designed around understanding options, keeping records and staying
             connected through care.</p>
           <div class="card-bottom"><span>Understand</span><span>Connect</span><span>Continue</span></div>
           <div class="card-actions"><a class="subtle-link" href="#download">Explore the app <span
-                aria-hidden="true">↗</span></a><button aria-label="Pause patient card border animation"
-              aria-pressed="false" class="pulse-control" hidden="" type="button">Pause glow</button></div>
+                aria-hidden="true">↗</span></a></div>
         </article>
         <article class="glass-card reveal provider-card" style="--delay:200ms"><svg aria-hidden="true"
             class="card-pulse" focusable="false">
@@ -200,8 +198,7 @@
             workflows and patient journeys.</p>
           <div class="card-bottom"><span>Coordinate</span><span>Manage</span><span>Follow through</span></div>
           <div class="card-actions"><a class="subtle-link" href="partners.html">Explore CuraX Partner <span
-                aria-hidden="true">↗</span></a><button aria-label="Pause provider card border animation"
-              aria-pressed="false" class="pulse-control" hidden="" type="button">Pause glow</button></div>
+                aria-hidden="true">↗</span></a></div>
         </article>
       </div>
     </section>
@@ -223,12 +220,18 @@
       <div class="legacy-footer-primary">
         <div class="legacy-footer-about">
           <a aria-label="CuraX home" class="legacy-footer-brand" href="index.html"><img alt="" height="46"
-              loading="lazy" src="assets/assets/curax-glass-alpha.webp" width="46" /><span>Cura<span
+              loading="lazy" src="assets/assets/curax-logo.png" width="46" /><span>Cura<span
                 class="legacy-footer-x">X</span></span></a>
-          <p class="legacy-footer-tagline">India's smartest healthcare marketplace — connecting patients with trusted
-            care providers since 2026.</p>
+          <p class="legacy-footer-tagline">Shaping the future of Indian healthcare with AI. Join the network that puts clarity before care</p>
         </div>
         <div aria-label="Contact details" class="legacy-footer-contact">
+          <a href="tel:+919618222956"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              viewbox="0 0 24 24">
+              <path
+                d="M6.4 3.5 9 6.4 7.4 9c1.2 3.3 4.2 6.3 7.6 7.6l2.5-1.6 3 2.6-1.1 3.3c-.2.6-.7 1-1.4 1-7.9 0-14.5-6.5-14.5-14.5 0-.6.4-1.2 1-1.4Z">
+              </path>
+            </svg><span>+91 96182 22956</span></a>
           <a href="tel:+919652294557"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
               stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               viewbox="0 0 24 24">
@@ -236,12 +239,12 @@
                 d="M6.4 3.5 9 6.4 7.4 9c1.2 3.3 4.2 6.3 7.6 7.6l2.5-1.6 3 2.6-1.1 3.3c-.2.6-.7 1-1.4 1-7.9 0-14.5-6.5-14.5-14.5 0-.6.4-1.2 1-1.4Z">
               </path>
             </svg><span>+91 96522 94557</span></a>
-          <a href="mailto:curaxapp@gmail.com"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
+          <a href="mailto:curax.life@gmail.com"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
               stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               viewbox="0 0 24 24">
               <rect height="14" rx="2" width="18" x="3" y="5"></rect>
               <path d="m4 7 8 6 8-6"></path>
-            </svg><span>curaxapp@gmail.com</span></a>
+            </svg><span>curax.life@gmail.com</span></a>
           <a href="mailto:lalit.haridasu@hlpinnovations.com"><svg aria-hidden="true" class="legacy-footer-icon"
               fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               viewbox="0 0 24 24">
@@ -262,15 +265,19 @@
                 <circle cx="12" cy="12" r="4"></circle>
                 <circle cx="17.3" cy="6.8" r="1"></circle>
               </svg></a>
-            <span aria-label="LinkedIn URL not supplied" class="legacy-footer-social-disabled"
-              title="LinkedIn URL not supplied"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
-                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                viewbox="0 0 24 24">
+            <a href="https://www.linkedin.com/showcase/curaxlife/" target="_blank" rel="noopener noreferrer"
+              class="legacy-footer-social" aria-label="Visit CuraX on LinkedIn" title="Visit CuraX on LinkedIn">
+
+              <svg aria-hidden="true" class="legacy-footer-icon" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+
                 <rect height="18" rx="2" width="18" x="3" y="3"></rect>
                 <path d="M8 10v7M8 7v.1M12 17v-7m0 3a3 3 0 0 1 6 0v4"></path>
-              </svg></span>
+
+              </svg>
+            </a>
             <a aria-label="Message CuraX on WhatsApp"
-              href="https://wa.me/919652294557?text=Hello%20I%20am%20interested%20in%20your%20services"
+              href="https://wa.me/919618222956?text=Hello%20I%20am%20interested%20in%20your%20services"
               rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"
                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                 viewbox="0 0 24 24">
@@ -291,10 +298,6 @@
             aria-hidden="true">|</span><span title="Terms page not provided">Terms of Use <small>(coming
               soon)</small></span></div>
         <p class="legacy-footer-company">A product of HLP Innovations Pvt Ltd</p>
-      </div>
-      <button aria-label="Turn off cursor glow" aria-pressed="true" class="cursor-toggle legacy-footer-cursor" hidden=""
-        type="button">Cursor glow: On</button>
-    </div>
   </footer>
   <button aria-label="Back to top" class="back-top" hidden="" type="button"><svg aria-hidden="true" class="icon"
       viewbox="0 0 24 24">
@@ -322,18 +325,21 @@
   </dialog>
   <dialog aria-labelledby="app-launch-title" id="app-launch"><button aria-label="Close app availability"
       class="close-dialog" type="button">×</button>
-    <p class="eyebrow">CuraX User App</p>
+    <p class="eyebrow">CuraX User</p>
     <h2 id="app-launch-title">Clarity is coming.</h2>
-    <p>The CuraX User App is coming soon. Download links will be available here once the app is published on Google Play
+    <p>The CuraX User is coming soon. Download links will be available here once the app is published on Google Play
       and the App Store.</p>
     <div class="app-dialog-actions"><a data-launch-updates="" href="#subscribe">Request launch updates</a><a
         href="partners.html">Become a partner <span aria-hidden="true">↗</span></a></div>
   </dialog>
+
   <script src="assets/js/site-config.js"></script>
   <script src="assets/js/live-wallpaper.js"></script>
   <script src="assets/js/home.js"></script>
   <script src="assets/js/section-lighting.js"></script>
   <script src="assets/js/cursor-glow.js"></script>
+  <script src="assets/js/curax-dynamic-tagline.js?v=1" defer></script>
+
 </body>
 
 </html>

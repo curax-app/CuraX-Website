@@ -1,0 +1,169 @@
+
+/* =========================================================
+   CuraX Hero - Three Column Dynamic Tagline
+   ========================================================= */
+
+.curax-rotating-tagline {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    align-items: center;
+
+    width: 100%;
+    margin: 10px auto auto 34px;
+    padding: 0 8px 28px 8px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    color: #e1eef3;
+}
+
+/* Invisible balancing column */
+
+.curax-tagline-balance {
+    grid-column: 1;
+    min-width: 0;
+}
+
+/* Stationary phrase */
+
+.curax-tagline-fixed {
+    grid-column: 2;
+    justify-self: end;
+
+    white-space: nowrap;
+    line-height: 48px;
+}
+
+/* Animated phrase viewport */
+
+.curax-tagline-window {
+    grid-column: 3;
+    justify-self: start;
+
+    position: relative;
+    display: block;
+
+    height: 48px;
+    min-width: 0;
+    overflow: hidden;
+
+    margin-left: 0.55em;
+    line-height: 48px;
+    text-align: left;
+}
+
+/* Animated text */
+
+#curaxDynamicText {
+    display: block;
+
+    height: 48px;
+    font-size: inherit;
+    line-height: 48px;
+    white-space: nowrap;
+
+    color: #0eb4f6;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Exit upward */
+
+#curaxDynamicText.curax-text-exit {
+    animation: curax-text-exit 250ms ease-in both;
+}
+
+@keyframes curax-text-exit {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Enter from below */
+
+#curaxDynamicText.curax-text-enter {
+    animation: curax-text-enter 250ms ease-out both;
+}
+
+@keyframes curax-text-enter {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .curax-rotating-tagline {
+        font-size: clamp(22px, 2.8vw, 32px);
+    }
+
+    .curax-tagline-fixed,
+    .curax-tagline-window,
+    #curaxDynamicText {
+        line-height: 1.5;
+    }
+
+    .curax-tagline-window,
+    #curaxDynamicText {
+        height: 1.5em;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .curax-rotating-tagline {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        row-gap: 4px;
+
+        margin: 24px auto 28px;
+        font-size: clamp(16px, 4vw, 22px);
+    }
+
+    .curax-tagline-balance {
+        display: none;
+    }
+
+    .curax-tagline-fixed,
+    .curax-tagline-window {
+        grid-column: 1;
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    .curax-tagline-window {
+        max-width: calc(100vw - 24px);
+        text-align: center;
+    }
+
+    #curaxDynamicText {
+        text-align: center;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    #curaxDynamicText.curax-text-exit,
+    #curaxDynamicText.curax-text-enter {
+        animation: none !important;
+    }
+}
