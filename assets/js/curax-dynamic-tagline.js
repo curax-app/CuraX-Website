@@ -15,7 +15,7 @@
         'Navigate healthcare.'
     ];
 
-    const HOLD_MS = 4500;
+    const HOLD_MS = 1300;
     const EXIT_MS = 250;
     const ENTER_MS = 250;
 

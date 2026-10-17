@@ -2140,3 +2140,25 @@ html, body { max-width: 100%; }
     .rail.section { grid-template-columns: minmax(0, 1fr); }
     .hero .visual-caption { padding: 10px; gap: 8px; }
 }
+
+
+/* =========================================================
+   Hide Vertical Scrollbar
+   Keep Page Scrolling Functional
+   ========================================================= */
+
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Legacy Edge / IE */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+    width: 0;
+}
+
+body {
+    overflow-x: clip;
+}
+

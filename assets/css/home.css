@@ -1686,3 +1686,25 @@ html, body { max-width: 100%; }
     .store-badge { min-width: 0; padding-inline: 8px; }
     .store-badge strong { font-size: 12px; }
 }
+
+
+/* =========================================================
+   Hide Vertical Scrollbar
+   Keep Page Scrolling Functional
+   ========================================================= */
+
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Legacy Edge / IE */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+    width: 0;
+}
+
+body {
+    overflow-x: clip;
+}
+

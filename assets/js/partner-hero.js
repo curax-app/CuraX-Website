@@ -19,8 +19,8 @@
         'potential.'
     ];
 
-    const HOLD_DURATION = 4500;
-    const TRANSITION_DURATION = 500;
+    const HOLD_DURATION = 1000;
+    const TRANSITION_DURATION = 800;
 
     function initializePartnerHero() {
         const root = document.querySelector('[data-curax-hero]');
