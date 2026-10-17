@@ -1667,3 +1667,22 @@ dialog a {
         font-size: 10px
     }
 }
+
+/* =========================================================
+   Responsive safeguards — CuraX User homepage
+   ========================================================= */
+html, body { max-width: 100%; }
+.hero-content, .glass-grid, .glass-card, .app-downloads { min-width: 0; }
+@media (max-width: 760px) {
+    .hero { height: auto; min-height: max(740px, 100svh); max-height: none; }
+    .hero-content { width: 100%; max-width: 100%; padding-inline: 16px; }
+    .glass-grid { grid-template-columns: minmax(0, 1fr); }
+    .store-row { max-width: 100%; }
+}
+@media (max-width: 420px) {
+    .nav { padding-inline: 16px; }
+    .hero-content { padding-inline: 12px; }
+    .store-row { gap: 8px; }
+    .store-badge { min-width: 0; padding-inline: 8px; }
+    .store-badge strong { font-size: 12px; }
+}

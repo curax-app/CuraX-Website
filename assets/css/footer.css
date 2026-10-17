@@ -236,3 +236,16 @@ footer.legacy-footer {
     color: #ccd8df;
     white-space: nowrap;
 }
+
+/* Shared narrow-screen footer safeguards. */
+@media (max-width: 760px) {
+    footer.legacy-footer { padding-inline: clamp(16px, 4vw, 24px); }
+    .legacy-footer-inner { width: 100%; }
+    .legacy-footer-primary { grid-template-columns: minmax(0, 1fr); }
+    .legacy-footer-contact > a { max-width: 100%; overflow-wrap: anywhere; }
+    .legacy-footer-navigation { gap: 12px 18px; }
+}
+@media (max-width: 390px) {
+    .legacy-footer-brand { font-size: 22px; }
+    .legacy-footer-partner { font-size: 10px; padding-left: 8px; }
+}

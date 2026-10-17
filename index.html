@@ -22,6 +22,9 @@
   <link href="assets/css/curax-dynamic-tagline.css?v=1" rel="stylesheet" />
   <link href="assets/css/section-lighting.css" rel="stylesheet" />
   <link href="assets/css/cursor-glow.css" rel="stylesheet" />
+  <link href="assets/css/store-glow.css" rel="stylesheet" />
+  <link href="assets/css/store-glow.css" rel="stylesheet" />
+<link href="assets/css/user-site-glow.css" rel="stylesheet" />
   <!-- Search engine and social sharing metadata -->
   <link href="https://www.curax.life/" rel="canonical" />
   <meta content="index, follow" name="robots" />
@@ -110,34 +113,69 @@
         </div>
 
 
+
         <div aria-label="Download CuraX User App" class="app-downloads entrance" id="download">
+
           <div class="store-row">
-            <svg aria-hidden="true" class="card-pulse" focusable="false">
-            <rect class="pulse-trail" pathlength="100" rx="15" x="1" y="1"></rect>
-            <rect class="pulse-head" pathlength="100" rx="15" x="1" y="1"></rect>
-          </svg>
+
+            <!-- Google Play -->
             <a aria-label="CuraX on Google Play, coming soon" class="store-badge" data-open="app-launch"
               data-store="googlePlay" href="#app-launch" id="google-play-button">
-              <svg aria-hidden="true" viewbox="0 0 28 32">
+              <!-- Animated glowing border -->
+              <svg class="store-glow-border" aria-hidden="true" focusable="false">
+                <rect class="store-glow-trail" x="1" y="1" rx="12" pathLength="100"></rect>
+
+                <rect class="store-glow-head" x="1" y="1" rx="12" pathLength="100"></rect>
+              </svg>
+
+              <!-- Google Play icon -->
+              <svg aria-hidden="true" viewBox="0 0 28 32">
                 <path d="M2 2.2v27.6L16.6 16Z" fill="#35d5a0"></path>
+
                 <path d="M2 2.2 19.7 12.4 16.6 16Z" fill="#55c1f8"></path>
+
                 <path d="m19.7 12.4 5.8 3.3c.4.2.4.4 0 .6l-5.8 3.3L16.6 16Z" fill="#ffcf53"></path>
+
                 <path d="M2 29.8 19.7 19.6 16.6 16Z" fill="#fa6e81"></path>
               </svg>
-              <span><small>COMING SOON ON</small><strong>Google Play</strong></span>
+
+              <span>
+                <small>COMING SOON ON</small>
+                <strong>Google Play</strong>
+              </span>
             </a>
+
+            <!-- App Store -->
             <a aria-label="CuraX on the App Store, coming soon" class="store-badge" data-open="app-launch"
               data-store="appleAppStore" href="#app-launch" id="app-store-button">
-              <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 28">
+              <!-- Animated glowing border -->
+              <svg class="store-glow-border" aria-hidden="true" focusable="false">
+                <rect class="store-glow-trail" x="1" y="1" rx="12" pathLength="100"></rect>
+
+                <rect class="store-glow-head" x="1" y="1" rx="12" pathLength="100"></rect>
+              </svg>
+
+              <!-- Apple icon -->
+              <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 28">
                 <path
                   d="M16.2 4.3c.9-1.1 1.5-2.5 1.4-4-1.4.1-3 .9-3.9 2-.9 1-1.6 2.5-1.4 3.9 1.5.1 3-.7 3.9-1.9ZM20.8 14.5c0-3.5 2.9-5.2 3-5.3-1.7-2.5-4.2-2.8-5.1-2.9-2.2-.2-4.2 1.3-5.3 1.3-1.1 0-2.8-1.3-4.6-1.2-2.4 0-4.6 1.4-5.8 3.5-2.5 4.3-.6 10.7 1.8 14.2 1.2 1.7 2.5 3.5 4.3 3.4 1.7-.1 2.4-1.1 4.5-1.1 2.1 0 2.7 1.1 4.6 1 1.9 0 3-1.7 4.1-3.4 1.3-1.9 1.8-3.7 1.8-3.8-.1 0-3.3-1.3-3.3-5.7Z"
                   transform="translate(-1 0) scale(.9)"></path>
               </svg>
-              <span><small>COMING SOON ON</small><strong>App Store</strong></span>
+
+              <span>
+                <small>COMING SOON ON</small>
+                <strong>App Store</strong>
+              </span>
             </a>
+
           </div>
-          <p class="app-availability">CuraX User · Coming soon to Android &amp; iOS</p>
+
+          <p class="app-availability">
+            CuraX User · Coming soon to Android &amp; iOS
+          </p>
+
         </div>
+
       </div>
       <div class="hero-bottom entrance"><span class="coordinate">HYDERABAD, INDIA<br /><span
             style="opacity:.5;line-height:2.4">17.3850° N   78.4867° E</span></span><a class="scroll-cue"
@@ -222,7 +260,8 @@
           <a aria-label="CuraX home" class="legacy-footer-brand" href="index.html"><img alt="" height="46"
               loading="lazy" src="assets/assets/curax-logo.png" width="46" /><span>Cura<span
                 class="legacy-footer-x">X</span></span></a>
-          <p class="legacy-footer-tagline">Shaping the future of Indian healthcare with AI. Join the network that puts clarity before care</p>
+          <p class="legacy-footer-tagline">Shaping the future of Indian healthcare with AI. Join the network that puts
+            clarity before care</p>
         </div>
         <div aria-label="Contact details" class="legacy-footer-contact">
           <a href="tel:+919618222956"><svg aria-hidden="true" class="legacy-footer-icon" fill="none"

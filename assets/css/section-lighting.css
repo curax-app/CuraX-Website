@@ -1,288 +1,384 @@
+
+/* =========================================================
+   CuraX Section Lighting
+   ========================================================= */
+
 /* Light blends into each section, beneath its copy and controls. */
+
 .vision {
-   position: relative;
-   isolation: isolate;
-   overflow: hidden
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 }
 
 .vision:before,
 .vision:after {
-   content: '';
-   position: absolute;
-   pointer-events: none;
-   z-index: -1
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .vision:before {
-   inset: 0;
-   background: radial-gradient(ellipse at 0% 62%, #0eb4f62e, transparent 68%);
-   filter: blur(28px)
+    inset: 0;
+    background: radial-gradient(
+        ellipse at 0% 62%,
+        #0eb4f62e,
+        transparent 68%
+    );
+    filter: blur(28px);
 }
 
 .vision:after {
-   left: -16%;
-   top: 8%;
-   width: 92%;
-   height: 90%;
-   background: conic-gradient(from 55deg at 0% 65%, transparent 0deg, #39cfff0d 14deg, #69dcff21 26deg, #0eb4f60b 39deg, transparent 52deg);
-   filter: blur(22px);
-   mask-image: linear-gradient(90deg, #000, transparent 92%);
-   -webkit-mask-image: linear-gradient(90deg, #000, transparent 92%)
+    left: -16%;
+    top: 8%;
+    width: 92%;
+    height: 90%;
+
+    background: conic-gradient(
+        from 55deg at 0% 65%,
+        transparent 0deg,
+        #39cfff0d 14deg,
+        #69dcff21 26deg,
+        #0eb4f60b 39deg,
+        transparent 52deg
+    );
+
+    filter: blur(22px);
+
+    mask-image: linear-gradient(
+        90deg,
+        #000,
+        transparent 92%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        #000,
+        transparent 92%
+    );
 }
 
+/* =========================================================
+   Invitation Lighting
+   ========================================================= */
+
 .invitation {
-   isolation: isolate
+    isolation: isolate;
 }
 
 .invitation:before {
-   left: -8%;
-   right: -8%;
-   bottom: -70px;
-   height: 100%;
-   background: conic-gradient(from -26deg at 50% 100%, transparent 0deg, #0eb4f612 10deg, #45d5ff30 26deg, #0eb4f612 42deg, transparent 52deg), radial-gradient(ellipse at 50% 100%, #0eb4f647, transparent 65%);
-   filter: blur(24px);
-   z-index: -1;
-   mask-image: linear-gradient(transparent, #000 48%);
-   -webkit-mask-image: linear-gradient(transparent, #000 48%)
+    left: -8%;
+    right: -8%;
+    bottom: -70px;
+    height: 100%;
+
+    background:
+        conic-gradient(
+            from -26deg at 50% 100%,
+            transparent 0deg,
+            #0eb4f612 10deg,
+            #45d5ff30 26deg,
+            #0eb4f612 42deg,
+            transparent 52deg
+        ),
+        radial-gradient(
+            ellipse at 50% 100%,
+            #0eb4f647,
+            transparent 65%
+        );
+
+    filter: blur(24px);
+    z-index: -1;
+
+    mask-image: linear-gradient(
+        transparent,
+        #000 48%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        transparent,
+        #000 48%
+    );
 }
 
 .invitation:after {
-   content: '';
-   position: absolute;
-   pointer-events: none;
-   z-index: -1;
-   left: 18%;
-   right: 18%;
-   bottom: -105px;
-   height: 240px;
-   background: radial-gradient(ellipse at 50% 80%, #a3eeff66 0%, #0eb4f638 30%, transparent 70%);
-   filter: blur(35px)
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+
+    left: 18%;
+    right: 18%;
+    bottom: -105px;
+    height: 240px;
+
+    background: radial-gradient(
+        ellipse at 50% 80%,
+        #a3eeff66 0%,
+        #0eb4f638 30%,
+        transparent 70%
+    );
+
+    filter: blur(35px);
 }
 
-/* SVG dashes follow the actual rounded perimeter clockwise at every size. */
-.patient-card {
-   border-radius: 16px;
-   border-color: #3fcaff42;
-   overflow: visible;
-   isolation: isolate;
-   background: radial-gradient(ellipse at var(--glow-x, 50%) var(--glow-y, 50%), #0eb4f60a, transparent 70%), linear-gradient(145deg, #37778d12, #07192524)
+/* =========================================================
+   Patient and Provider Cards
+   Original appearance preserved
+   ========================================================= */
+
+.patient-card,
+.provider-card {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+
+    border-radius: 16px;
+    border-color: #3fcaff42;
+
+    background:
+        radial-gradient(
+            ellipse at var(--glow-x, 50%) var(--glow-y, 50%),
+            #0eb4f60a,
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #37778d12,
+            #07192524
+        );
 }
 
-.patient-card:before {
-   display: none
+/* Disable original background pseudo-elements */
+
+.patient-card:before,
+.provider-card:before {
+    display: none;
 }
+
+/* Card hover backgrounds */
 
 .patient-card:hover,
-.patient-card:focus-within {
-   border-color: #69dcff66;
-   background: radial-gradient(ellipse at var(--glow-x, 50%) var(--glow-y, 50%), #0eb4f61b, transparent 70%), linear-gradient(145deg, #37778d1b, #0719252e)
+.patient-card:focus-within,
+.provider-card:hover,
+.provider-card:focus-within {
+    border-color: #69dcff66;
+
+    background:
+        radial-gradient(
+            ellipse at var(--glow-x, 50%) var(--glow-y, 50%),
+            #0eb4f61b,
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #37778d1b,
+            #0719252e
+        );
 }
 
-.patient-card>:not(.card-pulse) {
-   position: relative;
-   z-index: 1
+/* Keep all card content above the animated border */
+
+.patient-card > :not(.card-pulse),
+.provider-card > :not(.card-pulse) {
+    position: relative;
+    z-index: 1;
 }
 
-.card-pulse {
-   position: absolute;
-   inset: 0;
-   width: 100%;
-   height: 100%;
-   overflow: visible;
-   pointer-events: none;
-   fill: none;
-   opacity: 0;
-   transition: opacity .45s, filter .45s;
-   filter: drop-shadow(0 0 4px #0eb4f6b3) drop-shadow(0 0 13px #008aff66)
+/* =========================================================
+   Disable Previous SVG Border Glow
+   ========================================================= */
+
+.patient-card > .card-pulse,
+.provider-card > .card-pulse {
+    display: none !important;
 }
 
-.pulse-ready .card-pulse {
-   opacity: .8
+/* =========================================================
+   Shared Synchronized Glow
+   Both cards use the same animation clock
+   ========================================================= */
+
+/* Register an inheritable angle property */
+
+@property --ecosystem-glow-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
 }
 
-.patient-card:hover .card-pulse,
-.patient-card:focus-within .card-pulse {
-   opacity: 1;
-   filter: drop-shadow(0 0 5px #36ccff) drop-shadow(0 0 18px #008aff99)
+/* Animate the common parent only */
+
+.glass-grid {
+    animation: curax-shared-card-glow 4s linear infinite;
 }
 
-.pulse-trail,
-.pulse-head {
-   animation: card-orbit 8s linear infinite;
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   vector-effect: non-scaling-stroke
+/* Single animation shared by both cards */
+
+@keyframes curax-shared-card-glow {
+    from {
+        --ecosystem-glow-angle: 0deg;
+    }
+
+    to {
+        --ecosystem-glow-angle: 360deg;
+    }
 }
 
-.pulse-trail {
-   stroke: #098dff;
-   stroke-width: 2;
-   stroke-dasharray: 5 95
+/* =========================================================
+   CSS-Only Glowing Borders
+   Same visual language as Sign In and Store buttons
+   ========================================================= */
+
+.patient-card::after,
+.provider-card::after {
+    content: "";
+
+    position: absolute;
+    inset: -2px;
+
+    border-radius: inherit;
+    padding: 2px;
+
+    pointer-events: none;
+    z-index: 2;
+
+    background: conic-gradient(
+        from var(--ecosystem-glow-angle),
+
+        transparent 0deg,
+        transparent 225deg,
+
+        #098dff55 250deg,
+        #098dff 300deg,
+        #0eb4f6 330deg,
+
+        transparent 360deg
+    );
+
+    /* Mask everything except the border */
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    mask-composite: exclude;
+
+    filter:
+        drop-shadow(0 0 4px #0eb4f6b3)
+        drop-shadow(0 0 10px #008aff70);
 }
 
-.pulse-head {
-   stroke: #97ecff;
-   stroke-width: 1.9;
-   stroke-dasharray: 1 99;
-   stroke-dashoffset: -4.5
+/* =========================================================
+   Mirrored Movement
+   ========================================================= */
+
+/* Patient card - clockwise */
+
+.patient-card::after {
+    transform: none;
 }
 
-@keyframes card-orbit {
-   to {
-      stroke-dashoffset: var(--orbit-end, -100)
-   }
+/* Provider card - mirrored counterclockwise */
+
+.provider-card::after {
+    transform: scaleX(-1);
+    transform-origin: center;
 }
 
-.pulse-head {
-   --orbit-end: -104.5
+/* =========================================================
+   Hover Glow
+   ========================================================= */
+
+.patient-card:hover::after,
+.patient-card:focus-within::after,
+.provider-card:hover::after,
+.provider-card:focus-within::after {
+    filter:
+        drop-shadow(0 0 6px #36ccff)
+        drop-shadow(0 0 16px #008aff99);
 }
 
-.pulse-paused .pulse-trail,
-.pulse-paused .pulse-head {
-   animation-play-state: paused
-}
+/* =========================================================
+   Card Actions
+   ========================================================= */
 
 .card-actions {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 16px;
-   margin-top: 24px
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .pulse-control {
-   border: 0;
-   border-bottom: 1px solid #7acfe52e;
-   padding: 5px 0;
-   background: none;
-   color: #9cb9c7;
-   font-size: 9px;
-   line-height: 1.5
+    border: 0;
+    border-bottom: 1px solid #7acfe52e;
+    padding: 5px 0;
+
+    background: none;
+    color: #9cb9c7;
+
+    font-size: 9px;
+    line-height: 1.5;
 }
 
 .pulse-control:hover {
-   color: #bcf1ff
+    color: #bcf1ff;
 }
 
 .pulse-control:disabled {
-   opacity: .6;
-   cursor: default
+    opacity: 0.6;
+    cursor: default;
 }
 
-@media(max-width:600px) {
-   .vision:after {
-      left: -28%;
-      width: 128%;
-      height: 85%
-   }
+/* =========================================================
+   Mobile Responsive Lighting
+   ========================================================= */
 
-   .invitation:before {
-      left: -30%;
-      right: -30%
-   }
+@media (max-width: 600px) {
 
-   .invitation:after {
-      left: 8%;
-      right: 8%
-   }
+    .vision:after {
+        left: -28%;
+        width: 128%;
+        height: 85%;
+    }
+
+    .invitation:before {
+        left: -30%;
+        right: -30%;
+    }
+
+    .invitation:after {
+        left: 8%;
+        right: 8%;
+    }
 }
 
-@media(prefers-reduced-motion:reduce) {
+/* =========================================================
+   Reduced Motion Accessibility
+   ========================================================= */
 
-   .pulse-trail,
-   .pulse-head {
-      animation: none !important;
-      stroke-dasharray: none;
-      stroke-dashoffset: 0
-   }
+@media (prefers-reduced-motion: reduce) {
 
-   .pulse-head {
-      display: none
-   }
+    .glass-grid {
+        animation: none !important;
+    }
 
-   .card-pulse {
-      filter: drop-shadow(0 0 5px #0eb4f64d)
-   }
+    .patient-card::after,
+    .provider-card::after {
+        filter: none;
+    }
 
-   .patient-card:hover {
-      transform: none
-   }
+    .patient-card:hover,
+    .provider-card:hover {
+        transform: none;
+    }
 }
-
-/* Matching provider glow, travelling counterclockwise, independent of the patient card.
-   Both perimeter highlights use a single compact 5% trail + contiguous 1% bright tip. */
-.provider-card {
-   border-radius: 16px;
-   border-color: #3fcaff42;
-   overflow: visible;
-   isolation: isolate;
-   background: radial-gradient(ellipse at var(--glow-x, 50%) var(--glow-y, 50%), #0eb4f60a, transparent 70%), linear-gradient(145deg, #37778d12, #07192524)
-}
-
-.provider-card:before {
-   display: none
-}
-
-.provider-card:hover,
-.provider-card:focus-within {
-   border-color: #69dcff66;
-   background: radial-gradient(ellipse at var(--glow-x, 50%) var(--glow-y, 50%), #0eb4f61b, transparent 70%), linear-gradient(145deg, #37778d1b, #0719252e)
-}
-
-.provider-card>:not(.card-pulse) {
-   position: relative;
-   z-index: 1
-}
-
-.provider-card:hover .card-pulse,
-.provider-card:focus-within .card-pulse {
-   opacity: 1;
-   filter: drop-shadow(0 0 5px #36ccff) drop-shadow(0 0 18px #008aff99)
-}
-
-.provider-card .pulse-trail,
-.provider-card .pulse-head {
-   animation-name: card-orbit-reverse
-}
-
-.provider-card .pulse-head {
-   stroke-dashoffset: -4.5
-}
-
-@keyframes card-orbit-reverse {
-   to {
-      stroke-dashoffset: var(--orbit-reverse-end, 100)
-   }
-}
-
-.provider-card .pulse-head {
-   --orbit-reverse-end: 95.5
-}
-
-@media(prefers-reduced-motion:reduce) {
-   .provider-card:hover {
-      transform: none
-   }
-}
-
-/* Both SVG rectangles have the same starting coordinates and matching dash offsets.
-   Direction differs only in the sign of the animation travel: -100 versus +100.
-   The glow starts at the same relative point on each card, even after resizing. */
-/* One shared start phase: both glow tracks are armed together by JavaScript. */
-.patient-card .pulse-trail,
-.patient-card .pulse-head,
-.provider-card .pulse-trail,
-.provider-card .pulse-head {
-   animation-name: none
-}
-
-.pulse-synchronized.patient-card .pulse-trail,
-.pulse-synchronized.patient-card .pulse-head {
-   animation-name: card-orbit
-}
-
-.pulse-synchronized.provider-card .pulse-trail,
-.pulse-synchronized.provider-card .pulse-head {
-   animation-name: card-orbit-reverse
-}
-

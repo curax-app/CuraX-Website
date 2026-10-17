@@ -1,0 +1,83 @@
+/* =========================================================
+   Store badges - use the same glow style as Sign In
+   ========================================================= */
+
+/* Hide the old SVG glow completely */
+.store-badge > .store-glow-border {
+    display: none !important;
+}
+
+/* Apply the same CSS-only glow treatment */
+@property --store-glow-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.store-badge {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+    border-radius: 13px;
+}
+
+/* Same glow style as Sign In */
+.store-badge::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    pointer-events: none;
+    z-index: 2;
+
+    background: conic-gradient(
+        from var(--store-glow-angle),
+        transparent 0deg,
+        transparent 225deg,
+        #098dff55 250deg,
+        #098dff 300deg,
+        #0eb4f6 330deg,
+        transparent 360deg
+    );
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+
+    filter:
+        drop-shadow(0 0 4px #0eb4f6b3)
+        drop-shadow(0 0 10px #008aff70);
+
+    animation: curax-store-signin-glow 4s linear infinite;
+}
+
+/* Hover/focus same as Sign In */
+.store-badge:hover::after,
+.store-badge:focus-visible::after {
+    filter:
+        drop-shadow(0 0 6px #36ccff)
+        drop-shadow(0 0 16px #008aff99);
+}
+
+@keyframes curax-store-signin-glow {
+    from {
+        --store-glow-angle: 0deg;
+    }
+
+    to {
+        --store-glow-angle: 360deg;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .store-badge::after {
+        animation: none !important;
+    }
+}

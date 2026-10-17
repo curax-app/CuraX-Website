@@ -2056,3 +2056,87 @@ textarea {
         justify-content: center;
     }
 }
+
+
+/* =========================================================
+   CuraX responsive corrections — Partner
+   Keep last: overrides earlier desktop-only selectors.
+   ========================================================= */
+html, body { max-width: 100%; }
+.nav { min-width: 0; }
+.nav .brand { min-width: 0; flex-shrink: 0; }
+.nav .nav-links { min-width: 0; }
+.nav .nav-links a { white-space: nowrap; }
+.hero-grid, .why-grid, .faq-grid, .section-head, .publication { min-width: 0; }
+.hero-grid > *, .why-grid > *, .faq-grid > *, .section-head > *, .publication > * { min-width: 0; }
+.hero img, .section img { max-width: 100%; }
+@media (max-width: 1199px) and (min-width: 961px) {
+    .nav { padding-inline: clamp(20px, 3vw, 38px); gap: 16px; }
+    .nav .nav-links { gap: clamp(12px, 1.6vw, 20px); font-size: 12px; }
+    .nav .nav-links .button { font-size: 12px; padding: 10px 15px; }
+}
+/* This must come AFTER .nav .nav-links { display:flex } near the bottom. */
+@media (max-width: 960px) {
+    .nav { padding-inline: clamp(16px, 4vw, 32px); gap: 12px; }
+    .nav .nav-toggle { display: flex; flex: 0 0 42px; margin-left: auto; z-index: 2; }
+    .nav .nav-links { display: none; }
+    .nav .nav-links.is-open {
+        display: flex;
+        position: absolute;
+        top: calc(100% - 2px);
+        left: 16px;
+        right: 16px;
+        z-index: 21;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+        border: 1px solid #c5eaff35;
+        border-radius: 14px;
+        background: #071727f5;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    .nav .nav-links.is-open a { display: block; padding: 13px 15px; white-space: normal; font-size: 13px; }
+    .nav .nav-links.is-open .button { width: 100%; margin-top: 6px; font-size: 13px; }
+    .rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .steps, .features, .facility-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .section { padding-inline: clamp(18px, 5vw, 40px); }
+}
+@media (max-width: 680px) {
+    .nav { height: 74px; }
+    .nav .brand { gap: 7px; }
+    .nav .brand img { width: 30px; height: 30px; }
+    .nav .wordmark { font-size: 23px; }
+    .nav .partner-label { font-size: 9px; margin-left: 1px; padding-left: 8px; }
+    .hero.cx-partner-hero { min-height: 0; padding: 115px 20px 50px; }
+    .hero-grid.cx-hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 22px; }
+    .hero-copy.cx-hero-copy { min-width: 0; width: 100%; }
+    .cx-hero-actions { gap: 10px; }
+    .cx-hero-actions .button { min-width: 0; font-size: 12px; }
+    .cx-hero-visual { width: 100%; min-height: 0; margin: 10px auto 0; }
+    .cx-hero-team { display: block; width: 100%; max-width: 100%; height: auto; }
+    .cx-hero-tail { margin-top: 24px; }
+    .section { padding: 65px 20px; }
+    .section-head { display: block; }
+    .section-head > p { margin-top: 20px; max-width: 100%; }
+    .why-grid, .faq-grid { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .publication { grid-template-columns: minmax(0, 1fr); }
+    .publication > div + div { border-left: 0; border-top: 1px solid #b7eaff18; }
+    .rail.section { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 24px; gap: 10px; }
+    .rail-item { min-width: 0; padding: 15px 12px; }
+    .steps, .features, .facility-grid { grid-template-columns: minmax(0, 1fr); }
+    .finale { max-width: calc(100% - 32px); padding: 42px 20px; }
+    .preview-float { position: static; margin-top: 20px; }
+    .hero .visual-caption { left: 0; right: 0; }
+}
+@media (max-width: 390px) {
+    .nav .wordmark { font-size: 21px; }
+    .nav .partner-label { font-size: 8px; letter-spacing: .06em; }
+    .hero.cx-partner-hero { padding-inline: 16px; }
+    .cx-hero-actions .button { padding: 11px 13px; font-size: 11px; }
+    .rail.section { grid-template-columns: minmax(0, 1fr); }
+    .hero .visual-caption { padding: 10px; gap: 8px; }
+}

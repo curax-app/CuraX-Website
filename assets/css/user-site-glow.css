@@ -1,0 +1,119 @@
+
+/* =========================================================
+   CuraX User Website - Shared Cyan Glow
+   ========================================================= */
+
+:root {
+    --curax-glow-color: #098dff;
+    --curax-glow-bright: #0eb4f6;
+    --curax-glow-duration: 5s;
+}
+
+/* =========================================================
+   Patient and Provider Cards
+   Reuse existing SVG border animation
+   ========================================================= */
+
+/* Longer trail, matching download buttons */
+
+.patient-card .pulse-trail,
+.provider-card .pulse-trail {
+    stroke: var(--curax-glow-color);
+    stroke-width: 2;
+    stroke-dasharray: 30 70;
+    animation-duration: var(--curax-glow-duration);
+}
+
+/* Remove separate bright glowing head */
+
+.patient-card .pulse-head,
+.provider-card .pulse-head {
+    display: none;
+}
+
+/* Preserve glow around rounded card border */
+
+.patient-card .card-pulse,
+.provider-card .card-pulse {
+    filter:
+        drop-shadow(0 0 4px #0eb4f6b3)
+        drop-shadow(0 0 10px #008aff70);
+}
+
+/* Keep original synchronized opposite directions */
+/* Patient: clockwise */
+/* Provider: counterclockwise */
+
+/* =========================================================
+   Outlined Homepage Buttons
+   CSS-only rotating cyan border
+   ========================================================= */
+
+@property --curax-border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.nav-action,
+.app-dialog-actions a {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Animated border overlay */
+
+.nav-action::after,
+.app-dialog-actions a::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 2px;
+    pointer-events: none;
+
+    background: conic-gradient(
+        from var(--curax-border-angle),
+        transparent 0deg,
+        transparent 225deg,
+        #098dff55 250deg,
+        #098dff 300deg,
+        #0eb4f6 330deg,
+        transparent 360deg
+    );
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    mask-composite: exclude;
+
+    animation:
+        curax-button-glow var(--curax-glow-duration)
+        linear infinite;
+}
+
+@keyframes curax-button-glow {
+    to {
+        --curax-border-angle: 360deg;
+    }
+}
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .patient-card .pulse-trail,
+    .provider-card .pulse-trail,
+    .nav-action::after,
+    .app-dialog-actions a::after {
+        animation: none !important;
+    }
+}

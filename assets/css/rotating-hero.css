@@ -1,6 +1,11 @@
+
+/* =========================================================
+   CuraX Partner - Rotating Hero
+   ========================================================= */
+
 .cx-partner-hero,
 .cx-partner-hero * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .cx-partner-hero {
@@ -9,9 +14,9 @@
     overflow: hidden;
     background: #061924;
     color: #f3f8fc;
-    font-family: Poppins, Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     min-height: 790px;
-    padding: 170px clamp(24px, 4.8vw, 86px) 82px
+    padding: 170px clamp(24px, 4.8vw, 86px) 82px;
 }
 
 .cx-partner-hero:before {
@@ -20,7 +25,9 @@
     inset: 0;
     pointer-events: none;
     z-index: -2;
-    background: linear-gradient(90deg, #030b12de, transparent 80%), linear-gradient(0deg, #040a10, transparent 38%, #020b1370)
+    background:
+        linear-gradient(90deg, #030b12de, transparent 80%),
+        linear-gradient(0deg, #040a10, transparent 38%, #020b1370);
 }
 
 .cx-partner-hero:after {
@@ -32,9 +39,26 @@
     right: -8%;
     bottom: -80px;
     height: 78%;
-    background: conic-gradient(from -24deg at 73% 100%, transparent 0deg, #0eb4f60d 10deg, #45d5ff24 24deg, #0eb4f60d 38deg, transparent 48deg), radial-gradient(ellipse at 73% 100%, #0eb4f630, transparent 62%);
-    filter: blur(28px)
+    background:
+        conic-gradient(
+            from -24deg at 73% 100%,
+            transparent 0deg,
+            #0eb4f60d 10deg,
+            #45d5ff24 24deg,
+            #0eb4f60d 38deg,
+            transparent 48deg
+        ),
+        radial-gradient(
+            ellipse at 73% 100%,
+            #0eb4f630,
+            transparent 62%
+        );
+    filter: blur(28px);
 }
+
+/* =========================================================
+   Hero Background
+   ========================================================= */
 
 .cx-hero-landscape {
     position: absolute;
@@ -44,9 +68,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: .52;
-    transform: translate3d(0, var(--cx-parallax-y, 0px), 0);
-    will-change: transform
+    transform: translate3d(
+        0,
+        var(--cx-parallax-y, 0px),
+        0
+    );
+    will-change: transform;
 }
+
+/* =========================================================
+   Hero Layout
+   ========================================================= */
 
 .cx-hero-grid {
     display: grid;
@@ -54,28 +86,31 @@
     gap: clamp(32px, 4vw, 56px);
     align-items: center;
     max-width: 1350px;
-    margin: auto
+    margin: auto;
 }
 
 .cx-hero-copy {
     min-width: 0;
     position: relative;
     z-index: 2;
-    container-type: inline-size
+    container-type: inline-size;
 }
+
+/* =========================================================
+   Eyebrow
+   ========================================================= */
 
 .cx-hero-eyebrow {
     display: flex;
     align-items: center;
     gap: 12px;
-
     margin: 0 0 26px;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.14em;
+    letter-spacing: .14em;
 
     color: #ffffff;
     text-transform: uppercase;
@@ -87,95 +122,148 @@
     border-radius: 50%;
     background: #ffffff;
     box-shadow: 0 0 12px #19bfff77;
-    flex-shrink: 0
+    flex-shrink: 0;
 }
+
+/* =========================================================
+   Hero Heading
+   ========================================================= */
 
 .cx-partner-hero .cx-hero-title {
     margin: 0 0 25px;
     max-width: 100%;
-    font-size: var(--cx-title-fit, clamp(32px, 4.8vw, 76px));
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: var(
+        --cx-title-fit,
+        clamp(32px, 4.8vw, 76px)
+    );
     font-weight: 600;
+
     letter-spacing: -.052em;
     line-height: 1.22;
-    color: #f3f8fc
+    color: #f3f8fc;
 }
 
+/* Complete visible heading */
+
 .cx-title-visual {
-    display: block
+    display: block;
 }
+
+/* =========================================================
+   First Line - One platform.
+   ========================================================= */
 
 .cx-title-first {
     display: block;
     min-height: 1.28em;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
-.cx-title-first>span {
-    display: inline-block
+.cx-title-first > span {
+    display: inline-block;
 }
+
+/* =========================================================
+   Second Line - More + Rotating Word
+   ========================================================= */
 
 .cx-more-line {
     display: flex;
     align-items: baseline;
     gap: .22em;
+
     min-height: 1.35em;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
+/* Fixed text: More */
+
 .cx-hero-prefix {
-    flex-shrink: 0
+    flex-shrink: 0;
+    color: #f3f8fc;
 }
+
+/* =========================================================
+   Rotating Word Window
+   ========================================================= */
 
 .cx-word-window {
     position: relative;
     display: inline-grid;
     flex: none;
+
     overflow: hidden;
     block-size: 1.35em;
     padding-right: .12em;
+
     line-height: 1.22;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
+
+/* Invisible measurement layer
+   Reserves enough width for all rotating words */
 
 .cx-word-sizer {
     display: grid;
     visibility: hidden;
     pointer-events: none;
-    line-height: inherit
+    line-height: inherit;
 }
 
-.cx-word-sizer>span {
-    grid-area: 1/1;
-    white-space: nowrap
+.cx-word-sizer > span {
+    grid-area: 1 / 1;
+    white-space: nowrap;
 }
+
+/* =========================================================
+   Animated Words
+   ========================================================= */
 
 .cx-word-slot {
     position: absolute;
     top: 0;
     left: 0;
+
     white-space: nowrap;
+
+    font-family: 'Poppins', Arial, sans-serif;
     color: #70d8f0;
     line-height: inherit;
+
     text-shadow: 0 0 20px #70d8f026;
-    will-change: transform, opacity
+
+    will-change: transform, opacity;
 }
+
+/* Current visible word */
 
 .cx-word-current {
     opacity: 1;
-    transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0);
 }
+
+/* Upcoming word starts below */
 
 .cx-word-next {
     opacity: 0;
-    transform: translate3d(0, 105%, 0)
+    transform: translate3d(0, 105%, 0);
 }
+
+/* The existing rotating-hero.js handles the
+   transition between current and next words. */
+
+/* =========================================================
+   Hero Description
+   ========================================================= */
 
 .cx-hero-lead {
     max-width: 510px;
     font-size: 15px;
     line-height: 1.9;
     color: #bcd1dc;
-    margin: 0 0 21px
+    margin: 0 0 21px;
 }
 
 .cx-hero-audiences,
@@ -183,18 +271,22 @@
     font-size: 11px;
     line-height: 1.8;
     color: #8bb3c5;
-    margin: 0
+    margin: 0;
 }
 
 .cx-hero-location {
-    margin: 3px 0 30px
+    margin: 3px 0 30px;
 }
+
+/* =========================================================
+   Hero Actions
+   ========================================================= */
 
 .cx-hero-actions {
     display: flex;
     align-items: center;
     gap: 14px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .cx-hero-button {
@@ -202,33 +294,45 @@
     align-items: center;
     justify-content: center;
     gap: 13px;
+
     min-height: 49px;
     padding: 14px 23px;
+
     border: 1px solid #bcdeef36;
     border-radius: 40px;
+
     background: #133b4a29;
     color: #d8edf6;
     text-decoration: none;
-    font: 500 12px/1.4 Poppins, Arial, sans-serif;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+
     cursor: pointer;
-    transition: background .3s, border-color .3s
+    transition: background .3s, border-color .3s;
 }
 
 .cx-hero-button:hover {
     background: #14526b44;
-    border-color: #83d8ef70
+    border-color: #83d8ef70;
 }
 
 .cx-hero-primary {
     background: #e9f9ff;
     color: #04121d;
-    border-color: #e9f9ff
+    border-color: #e9f9ff;
 }
 
 .cx-hero-primary:hover {
     background: #8ee6fa;
-    border-color: #8ee6fa
+    border-color: #8ee6fa;
 }
+
+/* =========================================================
+   Hero Note
+   ========================================================= */
 
 .cx-hero-note {
     font-size: 12px;
@@ -239,276 +343,374 @@
     font-style: italic;
 }
 
+/* =========================================================
+   Hero Visual
+   ========================================================= */
+
 .cx-hero-visual {
     position: relative;
     isolation: isolate;
+
     display: flex;
     align-items: flex-end;
     justify-content: center;
     align-self: end;
+
     min-height: 475px;
-    min-width: 0
+    min-width: 0;
 }
 
 .cx-hero-team {
     position: relative;
     z-index: 1;
+
     display: block;
     flex-shrink: 0;
+
     width: 124%;
     max-width: 740px;
     height: auto;
+
     object-fit: contain;
+
     background: none;
     border: 0;
-    filter: brightness(1.08) contrast(1.03) saturate(1.04);
-    mask-image: linear-gradient(180deg, #000 0%, #000 66%, #000c 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 66%, #000c 80%, transparent 100%)
+
+    filter:
+        brightness(1.08)
+        contrast(1.03)
+        saturate(1.04);
+
+    mask-image: linear-gradient(
+        180deg,
+        #000 0%,
+        #000 66%,
+        #000c 80%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        180deg,
+        #000 0%,
+        #000 66%,
+        #000c 80%,
+        transparent 100%
+    );
 }
+
+/* =========================================================
+   Hero Caption
+   ========================================================= */
 
 .cx-hero-caption {
     position: absolute;
     z-index: 3;
+
     bottom: 0;
     left: 10px;
     right: 10px;
+
     padding: 15px 20px;
+
     border: 1px solid #d2efff2b;
     border-radius: 13px;
+
     backdrop-filter: blur(18px);
-    background: linear-gradient(130deg, #b8efff10, #071a26ce);
+    background: linear-gradient(
+        130deg,
+        #b8efff10,
+        #071a26ce
+    );
+
     color: #bbd6e3;
     font-size: 10px;
-    line-height: 1.7
+    line-height: 1.7;
 }
 
 .cx-hero-caption strong {
     display: block;
     font-size: 12px;
     font-weight: 500;
-    color: #e0f4fb
+    color: #e0f4fb;
 }
+
+/* =========================================================
+   Hero Footer
+   ========================================================= */
 
 .cx-hero-tail {
     max-width: 1350px;
     margin: 58px auto 0;
+
     display: flex;
     justify-content: space-between;
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
+
     color: #82a6b8;
     font-size: 9px;
-    letter-spacing: .16em
+    letter-spacing: .16em;
 }
 
 .cx-hero-motion {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .cx-hero-motion-button {
     border: 0;
     border-bottom: 1px solid #b7eaff30;
+
     background: none;
     padding: 7px 0;
+
     color: #a7cbdc;
+
     font: inherit;
     letter-spacing: .05em;
-    cursor: pointer
+
+    cursor: pointer;
 }
 
 .cx-hero-button:focus-visible,
 .cx-hero-motion-button:focus-visible {
     outline: 2px solid #76e5ff;
-    outline-offset: 5px
+    outline-offset: 5px;
 }
+
+/* =========================================================
+   Accessibility - Screen Reader Text
+   ========================================================= */
 
 .cx-sr-only {
     position: absolute !important;
+
     width: 1px;
     height: 1px;
+
     padding: 0;
     margin: -1px;
+
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+
     white-space: nowrap;
-    border: 0
+    border: 0;
 }
 
-@supports(font-size:1cqi) {
+/* =========================================================
+   Responsive Heading Fit
+   ========================================================= */
+
+@supports (font-size: 1cqi) {
     .cx-partner-hero .cx-hero-title {
-        font-size: var(--cx-title-fit, min(clamp(32px, 4.8vw, 76px), 10cqi))
+        font-size: var(
+            --cx-title-fit,
+            min(clamp(32px, 4.8vw, 76px), 10cqi)
+        );
     }
 }
 
-@media(max-width:1100px) {
+/* =========================================================
+   Tablets - 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
     .cx-partner-hero {
-        padding-inline: 40px
+        padding-inline: 40px;
     }
 
     .cx-hero-grid {
-        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-        gap: 32px
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(0, 1fr);
+
+        gap: 32px;
     }
 
     .cx-hero-visual {
-        min-height: 390px
+        min-height: 390px;
     }
 
     .cx-hero-team {
-        width: 119%
-    }
-
-    .cx-hero-lead {
-        font-size: 13px
-    }
-}
-
-@media(max-width:960px) {
-    .cx-partner-hero {
-        min-height: 760px;
-        padding-top: 150px
-    }
-
-    .cx-hero-visual {
-        min-height: 350px
-    }
-
-    .cx-hero-team {
-        width: 116%
-    }
-
-    .cx-hero-audiences,
-    .cx-hero-location {
-        font-size: 10px
-    }
-
-    .cx-hero-button {
-        padding: 12px 17px;
-        font-size: 14px
-    }
-}
-
-@media(max-width:680px) {
-    .cx-partner-hero {
-        padding: 128px 24px 44px;
-        min-height: 0
-    }
-
-    .cx-hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 25px
-    }
-
-    .cx-partner-hero .cx-hero-title {
-        font-size: var(--cx-title-fit, clamp(28px, 8.7vw, 54px));
-        margin-bottom: 22px
-    }
-
-    .cx-hero-eyebrow {
-        font-size: 8px;
-        margin-bottom: 23px
+        width: 119%;
     }
 
     .cx-hero-lead {
         font-size: 13px;
-        line-height: 1.85
+    }
+}
+
+/* =========================================================
+   Smaller Tablets - 960px
+   ========================================================= */
+
+@media (max-width: 960px) {
+    .cx-partner-hero {
+        min-height: 760px;
+        padding-top: 150px;
+    }
+
+    .cx-hero-visual {
+        min-height: 350px;
+    }
+
+    .cx-hero-team {
+        width: 116%;
+    }
+
+    .cx-hero-audiences,
+    .cx-hero-location {
+        font-size: 10px;
+    }
+
+    .cx-hero-button {
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   Mobile - 680px
+   ========================================================= */
+
+@media (max-width: 680px) {
+    .cx-partner-hero {
+        padding: 128px 24px 44px;
+        min-height: 0;
+    }
+
+    .cx-hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .cx-partner-hero .cx-hero-title {
+        font-size: var(
+            --cx-title-fit,
+            clamp(28px, 8.7vw, 54px)
+        );
+
+        margin-bottom: 22px;
+    }
+
+    .cx-hero-eyebrow {
+        font-size: 8px;
+        margin-bottom: 23px;
+    }
+
+    .cx-hero-lead {
+        font-size: 13px;
+        line-height: 1.85;
     }
 
     .cx-hero-location {
-        margin-bottom: 26px
+        margin-bottom: 26px;
     }
 
     .cx-hero-actions {
-        gap: 10px
+        gap: 10px;
     }
 
     .cx-hero-button {
         padding: 13px 19px;
         font-size: 11px;
-        min-height: 47px
+        min-height: 47px;
     }
 
     .cx-hero-note {
         font-size: 9px;
-        margin-top: 17px
+        margin-top: 17px;
     }
 
     .cx-hero-visual {
         min-height: 330px;
         max-width: 560px;
+
         margin: 5px auto 0;
+
         overflow: hidden;
-        width: 100%
+        width: 100%;
     }
 
     .cx-hero-team {
         width: 118%;
-        max-width: 620px
+        max-width: 620px;
     }
 
     .cx-hero-caption {
         bottom: 0;
         left: 0;
         right: 0;
+
         font-size: 9px;
-        padding: 13px 17px
+        padding: 13px 17px;
     }
 
     .cx-hero-caption strong {
-        font-size: 11px
+        font-size: 11px;
     }
 
     .cx-hero-tail {
         margin-top: 23px;
         font-size: 8px;
-        letter-spacing: .08em
+        letter-spacing: .08em;
     }
 
     .cx-hero-landscape {
         inset: 0;
         transform: none;
-        will-change: auto
+        will-change: auto;
     }
 
     .cx-partner-hero:after {
-        height: 64%
+        height: 64%;
     }
 }
 
-@media(max-width:680px) {
-    @supports(font-size:1cqi) {
+/* =========================================================
+   Mobile Container-Based Typography
+   ========================================================= */
+
+@media (max-width: 680px) {
+    @supports (font-size: 1cqi) {
         .cx-partner-hero .cx-hero-title {
-            font-size: var(--cx-title-fit, min(clamp(28px, 8.7vw, 54px), 10cqi))
+            font-size: var(
+                --cx-title-fit,
+                min(clamp(28px, 8.7vw, 54px), 10cqi)
+            );
         }
     }
 }
 
-@media(prefers-reduced-motion:reduce) {
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
     .cx-hero-landscape {
         transform: none;
-        will-change: auto
+        will-change: auto;
     }
 
     .cx-word-slot {
-        will-change: auto
+        will-change: auto;
     }
 
     .cx-word-next {
-        display: none
+        display: none;
     }
 
     .cx-hero-button {
-        transition: none
+        transition: none;
     }
 }
 
-
 /* =========================================================
-   CuraX Partner - Hero Typography
+   CuraX Partner - Typography Consistency
    ========================================================= */
 
 .cx-partner-hero,
@@ -522,8 +724,39 @@
 }
 
 .cx-partner-hero .cx-hero-button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
+}
+
+
+/* =========================================================
+   Responsive Partner headline: retain its two-line composition
+   while preventing long words from clipping narrow screens.
+   ========================================================= */
+.cx-word-window { min-width: 0; }
+.cx-word-sizer { width: max-content; }
+@media (max-width: 960px) {
+    .cx-hero-copy { container-type: normal; }
+    .cx-partner-hero .cx-hero-title { font-size: clamp(30px, 5.2vw, 58px); }
+}
+@media (max-width: 680px) {
+    .cx-partner-hero .cx-hero-title {
+        font-size: clamp(23px, 6.5vw, 39px);
+        line-height: 1.19;
+        letter-spacing: -.045em;
+        margin-bottom: 18px;
+    }
+    .cx-title-first { min-height: 1.23em; }
+    .cx-more-line { gap: .16em; min-height: 1.28em; align-items: baseline; }
+    .cx-word-window { block-size: 1.28em; padding-right: .07em; line-height: 1.19; }
+    .cx-word-slot { line-height: inherit; }
+    .cx-hero-eyebrow { font-size: 9px; letter-spacing: .1em; }
+    .cx-hero-lead { max-width: 100%; line-height: 1.7; }
+    .cx-hero-note { max-width: 100%; }
+}
+@media (max-width: 390px) {
+    .cx-partner-hero .cx-hero-title { font-size: clamp(20px, 6.1vw, 25px); }
+    .cx-more-line { gap: .13em; }
 }
